@@ -1,0 +1,22 @@
+---
+import Header from "../components/Header.astro"
+const { title, description, ogtitle, ogdescription, ogimage } = Astro.props
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/webp" href="/favicon.webp" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="og:image" content={ogimage} />
+		<meta name="og:description" content={ogdescription} />
+		<meta name="og:title" content={ogtitle} />
+	</head>
+	<body class="text-[#1d1d1d] dark:bg-[#1d1d1d] dark:text-white">
+		<Header/>
+		<slot/>
+	</body>
+</html>
