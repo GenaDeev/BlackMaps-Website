@@ -9,8 +9,17 @@ import Layout from "./layout.astro";
     ogdescription="Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad."
 >
     <main class="pt-[70px]">
+        <style>
+            .hero {
+                background: url("https://blackmaps.vercel.app/bg-map-l.webp");
+            }
+            @media (prefers-color-scheme: dark) {
+                .hero {
+                background: url("https://blackmaps.vercel.app/bg-map.webp");
+            }
+        </style>
         <section
-            class="hero w-full flex items-center justify-center h-screen bg-[url(https://blackmaps.vercel.app/bg-map-l.webp)] dark:bg-[url(blackmaps.vercel.app/bg-map.webp)]"
+            class="hero w-full flex items-center justify-center h-screen"
         >
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
