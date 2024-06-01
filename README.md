@@ -7,9 +7,9 @@ Bienvenido al sitio web oficial de **BlackMaps**, una cuenta de X (antes Twitter
 
 ## Secciones
 
-- **[Inicio](#)**
-- **[Historia](#about)**
-- **[Mapas](maps)**
+- **[Inicio](https://blackmaps.vercel.app/)**
+- **[Historia](https://blackmaps.vercel.app/#about)**
+- **[Mapas](https://blackmaps.vercel.app/maps)**
 
 ## Desarrollo
 
