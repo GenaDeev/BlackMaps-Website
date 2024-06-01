@@ -1,6 +1,6 @@
-# BlackMaps™ - Sitio Oficial
+# 🗺️ BlackMaps™ - Sitio en desarrollo
 
-![BlackMaps Logo](public/logo.png)
+![BlackMaps Logo](public/readme-banner.webp)
 
 ## Descripción
 
@@ -20,7 +20,7 @@ Este sitio web ha sido desarrollado por **[GenaDev](https://www.linkedin.com/in/
 - **[Licencia](license)**
 - **[GenaDev](https://www.linkedin.com/in/genadev)**
 
-## Conéctate con Nosotros
+## Contacta a BlackMaps
 
 - [Twitch](https://www.twitch.tv/mapsblack/)
 - [Instagram](https://www.instagram.com/maps_black/)
