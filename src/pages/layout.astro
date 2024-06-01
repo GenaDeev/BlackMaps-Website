@@ -1,24 +1,96 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-const { title, description, ogtitle, ogdescription, ogimage } = Astro.props
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const { title, description, ogtitle, ogdescription, ogimage, url, keywords } = Astro.props;
 ---
 
 <html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/webp" href="/favicon.webp" />
-		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/webp" href="https://blackmaps.vercel.app/favicon.webp" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="og:image" content={ogimage} />
-		<meta name="og:description" content={ogdescription} />
-		<meta name="og:title" content={ogtitle} />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={ogtitle} />
+		<meta property="og:description" content={ogdescription} />
+		<meta property="og:image" content={ogimage} />
+		<meta property="og:url" content={url} />
+		<meta property="og:site_name" content="Black Maps" />
+		<meta property="og:locale" content="es_MX" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@maps_black" />
+		<meta name="twitter:title" content={ogtitle} />
+		<meta name="twitter:description" content={ogdescription} />
+		<meta name="twitter:image" content={ogimage} />
+		<meta name="twitter:url" content={url} />
+
+		<!-- Facebook -->
+		<meta property="fb:app_id" content="1179608519718137" />
+
+		<!-- Apple -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="https://blackmaps.vercel.app/at-180.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="https://blackmaps.vercel.app/at-120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="167x167"
+			href="https://blackmaps.vercel.app/at-167.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="https://blackmaps.vercel.app/at-152.png"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<meta name="apple-mobile-web-app-title" content={title} />
+
+		<!-- Microsoft -->
+		<meta name="msapplication-TileColor" content="#333333" />
+		<meta name="msapplication-TileImage" content="https://blackmaps.vercel.app/mstile-144x144.png" />
+		<meta name="msapplication-config" content="https://blackmaps.vercel.app/browserconfig.xml" />
+		<meta name="theme-color" content="#333333" />
+
+		<!-- SEO -->
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<link rel="canonical" href={url} />
+		<link rel="alternate" hreflang="es" href="{alternate_url_es}" />
+
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="manifest.json" />
+
+		<!-- Additional Tags -->
+		<meta name="author" content="BlackMaps" />
+		<meta name="publisher" content="GenaDev" />
+		<meta name="rating" content="5" />
+		<meta name="distribution" content="global" />
+		<meta name="copyright" content="BlackMaps™ 2024" />
+		<meta name="keywords" content={keywords} />
 	</head>
+
 	<body class="text-[#1d1d1d] bg-[#ccc] dark:bg-[#1d1d1d] dark:text-white">
-		<Header/>
-		<slot/>
-		<Footer/>
+		<Header />
+		<slot />
+		<Footer />
 	</body>
 </html>
