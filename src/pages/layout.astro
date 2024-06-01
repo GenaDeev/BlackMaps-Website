@@ -1,9 +1,10 @@
 ---
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 const { title, description, ogtitle, ogdescription, ogimage } = Astro.props
 ---
 
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/webp" href="/favicon.webp" />
@@ -15,8 +16,9 @@ const { title, description, ogtitle, ogdescription, ogimage } = Astro.props
 		<meta name="og:description" content={ogdescription} />
 		<meta name="og:title" content={ogtitle} />
 	</head>
-	<body class="text-[#1d1d1d] dark:bg-[#1d1d1d] dark:text-white">
+	<body class="text-[#1d1d1d] bg-[#ccc] dark:bg-[#1d1d1d] dark:text-white">
 		<Header/>
 		<slot/>
+		<Footer/>
 	</body>
 </html>

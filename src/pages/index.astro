@@ -1,4 +1,5 @@
 ---
+import Logo from "../components/Logo.astro";
 import Layout from "./layout.astro";
 ---
 
@@ -15,63 +16,74 @@ import Layout from "./layout.astro";
             }
             @media (prefers-color-scheme: dark) {
                 .hero {
-                background: url("https://blackmaps.vercel.app/bg-map.webp");
-            }}
+                    background: url("https://blackmaps.vercel.app/bg-map.webp");
+                }
+            }
         </style>
-        <section
-            class="hero w-full flex items-center justify-center h-screen"
-        >
+        <section class="hero flex items-center justify-center h-screen">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-                <div class="max-w-md">
+                <div class="max-w-lg sm:p-0 p-12">
                     <h1 class="mb-5 text-5xl font-bold">🗺️Bienvenido/a</h1>
                     <p class="mb-5 text-xl">
-                        Este es el sitio web oficial de Black Maps, una cuenta
-                        de X (antes Twitter) que se dedica a publicar mapas
-                        sobre absolutamente todo. Algo existe? Le hacemos un
-                        mapa.
+                        Este es el sitio web oficial de <span class="font-bold"
+                            >Black Maps</span
+                        >, una cuenta de X (antes Twitter) que se dedica a
+                        publicar mapas sobre absolutamente todo. Algo existe? Le
+                        hacemos un mapa.
                     </p>
-                    <div class="links flex gap-3 justify-center">
+                    <div class="links flex gap-3 justify-center flex-wrap">
                         <a
                             title="Mapas"
-                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold"
-                            href="/mapas">Galeria de Mapas</a
+                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
+                            href="maps">Galeria de Mapas</a
                         >
                         <a
                             title="Twitter"
-                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold"
+                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
                             href="https://x.com/maps_black">Twitter</a
                         >
                         <a
                             title="Historia"
-                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold"
+                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
                             href="#about">Historia</a
                         >
                         <a
                             title="Contacto"
-                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold"
-                            href="https://x.com/maps_black">Contacto</a
+                            class="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
+                            href="contact">Contacto</a
                         >
                     </div>
                 </div>
             </div>
         </section>
-        <section class="w-full flex items-center justify-center h-screen p-12">
-            <div class="flex flex-col sm:p-72">
+        <section id="about" class="flex items-center justify-center py-[400px] h-screen p-12">
+            <div class="flex flex-col sm:w-3/4 bg-white dark:bg-[#3d3d3d] items-center justify-center rounded-xl p-4">
                 <p
-                    class="tracking-widest uppercase first-letter:text-7xl first-letter:font-bold"
+                    class="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-6xl"
                 >
                     Origenes de Black Maps, Primer Mapa
                 </p>
-                <p class="text-gray-500 dark:text-gray-400">
-                    Black Maps subio su primer mapa un sabado 20 de junio de
-                    2020, con el cual empezaria una emocionante historia que
-                    data hasta el dia de hoy en 2024. En aquella epocam Maps
+                <p class="text-[#3d3d3d] dark:text-gray-400">
+                    Black Maps subio su primer mapa un <span class="font-bold">sabado 20 de junio de
+                    2020</span>, con el cual empezaria una emocionante historia que
+                    data hasta el dia de hoy en <span class="font-bold">2024</span>. En aquella epoca Maps
                     escribia sus tuits en ingles, por lo que su primer mapa
-                    publicado se llama "Life expectancy by country", es decir
-                    "Esperanza de vida por pais".
+                    publicado se llama <span class="font-bold">"Life expectancy by country"</span>, es decir
+                    <span class="font-bold">"Esperanza de vida por pais"</span>.
                 </p>
-                <img loading="lazy" src="first-map.webp" class="mt-12 rounded-xl w-full sm:w-1/2">
+                <div class="flex mt-4 items-center justify-center flex-wrap gap-24">
+                    <img
+                        loading="lazy"
+                        src="first-map.webp"
+                        class="rounded-xl p-2 w-full sm:w-1/2 hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
+                    />
+                    <Logo
+                        width="128px"
+                        height="128px"
+                        className="dark:invert hover:scale-110 transition duration-500 filter hover:drop-shadow-custom-lg"
+                    />
+                </div>
             </div>
         </section>
     </main>
