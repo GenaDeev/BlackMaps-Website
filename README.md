@@ -1,6 +1,5 @@
-# 🗺️ BlackMaps™ - Sitio en desarrollo
-
 ![BlackMaps Logo](public/readme-banner.webp)
+# 🗺️ BlackMaps™ - Sitio en desarrollo
 
 ## Descripción
 
