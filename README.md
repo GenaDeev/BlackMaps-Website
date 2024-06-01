@@ -15,8 +15,8 @@ Bienvenido al sitio web oficial de **BlackMaps**, una cuenta de X (antes Twitter
 
 Este sitio web ha sido desarrollado por **[GenaDev](https://www.linkedin.com/in/genadev)** y alojado por **[GenaHost](https://genahost.vercel.app/)**. Los mapas y logos del sitio son propiedad de BlackMaps y no deben ser utilizados sin autorización.
 
-- **[Repositorio](repo)**
-- **[Licencia](license)**
+- **[Repositorio](https://github.com/GenaAaaj/BlackMaps-Website/)**
+- **[Licencia](https://github.com/GenaAaaj/BlackMaps-Website/blob/main/LICENSE)**
 - **[GenaDev](https://www.linkedin.com/in/genadev)**
 
 ## Contacta a BlackMaps
@@ -24,7 +24,7 @@ Este sitio web ha sido desarrollado por **[GenaDev](https://www.linkedin.com/in/
 - [Twitch](https://www.twitch.tv/mapsblack/)
 - [Instagram](https://www.instagram.com/maps_black/)
 - [Twitter](https://x.com/maps_black/)
-- [GitHub](#)
+- [GitHub](https://github.com/GenaAaaj/BlackMaps-Website/)
 - [Correo Electrónico](mailto:maps.black8@gmail.com)
 
 ## Información Adicional
