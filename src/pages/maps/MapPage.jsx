@@ -14,7 +14,7 @@ export default function MapPage() {
             tweet: "https://x.com/maps_black/status/1274199573003669507",
             id: 1,
             date: "2020-06-20",
-            likes: 150,
+            likes: 2,
         },
         {
             title: "Countries where BlackPink has played live (Source: Wikipedia) ",
@@ -22,7 +22,7 @@ export default function MapPage() {
             tweet: "https://x.com/maps_black/status/1274201215736451079",
             id: 2,
             date: "2020-06-20",
-            likes: 200,
+            likes: 2,
         },
         {
             title: "Countries with Wolves (Source: Wikipedia)",
@@ -30,7 +30,7 @@ export default function MapPage() {
             tweet: "https://x.com/maps_black/status/1274487667892289538",
             id: 3,
             date: "2020-06-20",
-            likes: 100,
+            likes: 1,
         },
     ];
 
@@ -112,8 +112,8 @@ export default function MapPage() {
                     </select>
                 </div>
                 <div className="maps-container flex flex-wrap gap-8 items-center justify-center pt-24 pb-16 px-4">
-                    {currentMaps.map(({ title, map, tweet, id, date }) => (
-                        <MapCard key={id} title={title} mapid={id} date={date} map={map} tweet={tweet} />
+                    {currentMaps.map(({ title, map, tweet, id, date, likes }) => (
+                        <MapCard likes={likes} key={id} title={title} mapid={id} date={date} map={map} tweet={tweet} />
                     ))}
                 </div>
                 <nav className="p-4">
