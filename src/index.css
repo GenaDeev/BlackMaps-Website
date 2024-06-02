@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero {
+  background: url("https://blackmaps.vercel.app/bg-map-l.webp");
+}
+@media (prefers-color-scheme: dark) {
+.hero {
+  background: url("https://blackmaps.vercel.app/bg-map.webp");
+}
+}
+.cls-1 {
+  font-size: 60px;
+  font-family: "Quicksans Accurate ICG Fill";
+}

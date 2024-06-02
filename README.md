@@ -38,11 +38,12 @@ Este sitio web ha sido desarrollado por **[GenaDev](https://www.linkedin.com/in/
     └── (imágenes y mapas)
 🚧 src/
     ├── 🧩components/
-    │     ├── Footer.astro
-    │     ├── Header.astro
-    │     └── Logo.astro
+    │     ├── Footer.jsx
+    │     ├── Header.jsx
+    │     ├── MapCard.jsx
+    │     └── Logo.jsx
     ├── 📱pages/
-    │     └── maps/
-    │         └── index.astro
-    ├── 🏨index.astro
-    └── 🌱layout.astro 
+    │     ├── maps/
+    │     │   └── MapPage.jsx (map gallery)
+    │     └───🏨Home.jsx (homepage)
+    └── 🌱App.jsx (react-router)
