@@ -14,7 +14,7 @@ export default function MapPage() {
             tweet: "https://x.com/maps_black/status/1274199573003669507",
             id: 1,
             date: "2020-06-20",
-            likes: 2,
+            likes: undefined,
         },
         {
             title: "Countries where BlackPink has played live (Source: Wikipedia) ",
@@ -22,7 +22,7 @@ export default function MapPage() {
             tweet: "https://x.com/maps_black/status/1274201215736451079",
             id: 2,
             date: "2020-06-20",
-            likes: 2,
+            likes: undefined,
         },
         {
             title: "Countries with Wolves (Source: Wikipedia)",
@@ -30,7 +30,143 @@ export default function MapPage() {
             tweet: "https://x.com/maps_black/status/1274487667892289538",
             id: 3,
             date: "2020-06-20",
-            likes: 1,
+            likes: undefined,
+        },
+        {
+            title: "Legality of Same Sex Marriage 🏳️‍🌈",
+            map: "https://pbs.twimg.com/media/EbNatVDX0AEKfn1?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275462862237024257",
+            id: 4,
+            date: "2020-06-23",
+            likes: undefined,
+        },
+        {
+            title: "Countries with Peafowl 🦚 (Source: Wikipedia) *just natural habitat",
+            map: "https://pbs.twimg.com/media/EbOW7H-WsAY4DFI?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275529069019500549",
+            id: 5,
+            date: "2020-06-23",
+            likes: undefined,
+        },
+        {
+            title: "Tax havens (Source: Wikipedia)",
+            map: "https://pbs.twimg.com/media/EbOYCY4WsAIsxo4?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275530295295594504",
+            id: 6,
+            date: "2020-06-23",
+            likes: undefined,
+        },
+        {
+            title: "Most common blood type by country 🩸 (Source: Wikipedia)",
+            map: "https://pbs.twimg.com/media/EbOYj45XYAIcw22?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275530870657552384",
+            id: 7,
+            date: "2020-06-23",
+            likes: undefined,
+        },
+        {
+            title: "Historical range of Mammoths (Source: Wikipedia)",
+            map: "https://pbs.twimg.com/media/EbTdDYNXYAMSoG2?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275887651317600261",
+            id: 8,
+            date: "2020-06-24",
+            likes: undefined,
+        },
+        {
+            title: "Most voted third party on 2004 US elections 🇺🇸",
+            map: "https://pbs.twimg.com/media/EbTdLKNWAAAECU5?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275887787078811649",
+            id: 9,
+            date: "2020-06-24",
+            likes: undefined,
+        },
+        {
+            title: "Countries with Gorillas 🦍 (Source: Wikipedia)",
+            map: "https://pbs.twimg.com/media/EbTdw54XkAMoGFc?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1275888435933384705",
+            id: 10,
+            date: "2020-06-24",
+            likes: undefined,
+        },
+        {
+            title: "Coca-Cola vs Pepsi",
+            map: "https://pbs.twimg.com/media/EbYPZy_XsAAqpo5?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276224487269322752",
+            id: 11,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "Countries with Versace Stores (Source: Versace Website)",
+            map: "https://pbs.twimg.com/media/EbYPgVAWAAA4rT7?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276224601597640706",
+            id: 12,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "Major religion by country",
+            map: "https://pbs.twimg.com/media/EbYPphPWAAAH0OL?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276224756816261121",
+            id: 13,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "Countries with Tigers 🐅 (Source: Wikipedia)",
+            map: "https://pbs.twimg.com/media/EbYSJWGXkAIsXOT?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276227505062584336",
+            id: 14,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "Countries in the Southern Hemisphere",
+            map: "https://pbs.twimg.com/media/EbYSWmJWkAEJ4rP?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276227730829463555",
+            id: 15,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "2018 Mexican Presidential Election",
+            map: "https://pbs.twimg.com/media/EbYSswNXsAAnXvk?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276228110103478275",
+            id: 16,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "Highest temperature recorded by country 🌡",
+            map: "https://pbs.twimg.com/media/EbZCFPxWsAMD7sY?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1276280208849584133",
+            id: 17,
+            date: "2020-06-25",
+            likes: undefined,
+        },
+        {
+            title: "2017 australian referendum legalize same sex marriage 🇦🇺",
+            map: "https://pbs.twimg.com/media/EbnmcqiXYAMN6Z3?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1277305356738158592",
+            id: 18,
+            date: "2020-06-28",
+            likes: undefined,
+        },
+        {
+            title: "Electoral democracies (Source: FreedomHouse)",
+            map: "https://pbs.twimg.com/media/Ebnp3fwXsAAlCD6?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1277309114897530880",
+            id: 19,
+            date: "2020-06-28",
+            likes: undefined,
+        },
+        {
+            title: "Legal status of homosexuality 🏳️‍🌈",
+            map: "https://pbs.twimg.com/media/EboSd_BXgAA1lss?format=webp&name=large",
+            tweet: "https://x.com/maps_black/status/1277353758742261761",
+            id: 20,
+            date: "2020-06-28",
+            likes: undefined,
         },
     ];
 
@@ -47,7 +183,7 @@ export default function MapPage() {
             .filter(map => map.title.toLowerCase().includes(searchQuery.toLowerCase()))
             .sort((a, b) => {
                 if (sortCriteria === "date-desc") {
-                    return new Date(b.date).getTime() - new Date(a.date).getTime();
+                    return b.id - a.id;
                 } else if (sortCriteria === "date-asc") {
                     return new Date(a.date).getTime() - new Date(b.date).getTime();
                 } else if (sortCriteria === "likes") {
@@ -108,7 +244,7 @@ export default function MapPage() {
                     >
                         <option value="date-desc">Fecha (más reciente)</option>
                         <option value="date-asc">Fecha (más antigua)</option>
-                        <option value="likes">Likes</option>
+                        <option title="Proximamente..." disabled value="likes">Likes</option>
                     </select>
                 </div>
                 <div className="maps-container flex flex-wrap gap-8 items-center justify-center pt-24 pb-16 px-4">

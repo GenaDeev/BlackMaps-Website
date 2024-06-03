@@ -2,10 +2,11 @@ export default function MapCard(props) {
     const { title, map, tweet, mapid, date, likes } = props;
     return (
         <div
-            className="h-[500px] max-w-sm flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-gray-700"
+            className="h-[500px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-gray-700"
         >
             <a href={map}>
                 <img
+                    loading="lazy"
                     className="rounded-t-lg w-full h-56"
                     src={map}
                     alt={"Mapa de BlackMaps titulado: " + title}
@@ -25,7 +26,7 @@ export default function MapCard(props) {
                             </svg>
                             {date}
                         </div>
-                        <div className="flex items-center gap-2">
+                        {/*<div className="flex items-center gap-2">
                             <svg
                                 className="w-5 h-5"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +37,7 @@ export default function MapCard(props) {
                             </svg>
 
                             {likes}
-                        </div>
+                            </div>*/}
                     </div>
                     <a href={tweet}>
                         <h5
@@ -72,7 +73,7 @@ export default function MapCard(props) {
                     </a>
                     <h6
                         className="px-1 cursor-pointer rounded-full dark:bg-[#2d2d2d]"
-                        title={"Este es el mapa numero " + mapid + "de Black Maps"}
+                        title={"Este es el mapa numero " + mapid + " de Black Maps"}
                     >
                         #{mapid}
                     </h6>
