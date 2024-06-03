@@ -9,10 +9,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/webp" href="https://blackmaps.vercel.app/favicon.webp" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
         <meta property="fb:app_id" content="1179608519718137" />
         <meta property="og:site_name" content="Black Maps" />
         <meta property="og:locale" content="es_MX" />
