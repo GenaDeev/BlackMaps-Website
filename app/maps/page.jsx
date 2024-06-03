@@ -8,6 +8,14 @@ export const metadata = {
       description: "Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.",
       images: 'https://blackmaps.vercel.app/og-maps.png',
     },
+twitter: {
+    card: 'summary_large_image',
+    title: 'Galeria de Mapas | Black Maps',
+    description: 'Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.',
+    creator: '@maps_black',
+    creatorId: '1274191176267071490',
+    images: ['https://blackmaps.vercel.app/og-maps.png'],
+  },
   };
 export default function MapsPage() {
     
