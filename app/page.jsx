@@ -1,22 +1,19 @@
-import Logo from "../components/Logo";
-import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom'
+import Image from "next/image";
+import Logo from './components/Logo'
 
-export default function HomePage() {
-    return (
-            <main className="pt-[60px]">
-                <Helmet>
-                <title>Black Maps | Los mejores mapas, ahora online.</title>
-                <meta name="description" content="Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad." />
-                <meta property="og:title" content="Black Maps | Los mejores mapas, ahora online." />
-                <meta property="og:description" content="Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad." />
-                <meta property="og:image" content="https://blackmaps.vercel.app/home-og.png" />
-                <meta property="og:url" content="https://blackmaps.vercel.app/" />
-                <meta name="twitter:title" content="Black Maps | Los mejores mapas, ahora online." />
-                <meta name="twitter:description" content="Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad." />
-                <meta name="twitter:image" content="https://blackmaps.vercel.app/home-og.png" />
-                <meta name="twitter:url" content="https://blackmaps.vercel.app/" />
-            </Helmet>
+export const metadata = {
+  title: "Black Maps | Los mejores mapas, ahora online.",
+  description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad.",
+  keywords: ["Maps", "Twitter", "Black", "BlackMaps"],
+  openGraph: {
+    title: "Black Maps | Los mejores mapas, ahora online.",
+    description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad.",
+    images: 'https://blackmaps.vercel.app/og-home.png',
+  },
+};
+export default function Home() {
+  return (
+    <main className="pt-[60px]">
                 <section className="hero flex items-center justify-center h-screen">
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
@@ -30,11 +27,11 @@ export default function HomePage() {
                                 hacemos un mapa.
                             </p>
                             <div className="links flex gap-3 justify-center flex-wrap">
-                                <Link
+                                <a
                                     title="Mapas"
                                     className="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
-                                    to="/maps">Galeria de Mapas
-                                </Link>
+                                    href="/maps">Galeria de Mapas
+                                </a>
                                 <a
                                     title="Twitter"
                                     className="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
@@ -70,10 +67,13 @@ export default function HomePage() {
                             <span className="font-bold">"Esperanza de vida por pais"</span>.
                         </p>
                         <div className="flex mt-4 items-center justify-center flex-wrap gap-24">
-                            <img
+                            <Image
                                 loading="lazy"
-                                src="first-map.webp"
+                                src="/first-map.webp"
                                 className="rounded-xl p-2 w-full sm:w-1/2 hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
+                                alt="Primer Mapa de Black Maps"
+                                width={400}
+                                height={200}
                             />
                             <Logo
                                 width="128px"
@@ -84,5 +84,5 @@ export default function HomePage() {
                     </div>
                 </section>
             </main>
-    )
+  );
 }

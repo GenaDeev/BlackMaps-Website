@@ -1,5 +1,4 @@
 import Logo from "./Logo";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -16,13 +15,13 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Secciones</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
                                 <li>
-                                    <Link to="/" className="hover:underline">Inicio</Link>
+                                    <a href="https://blackmaps.vercel.app" className="hover:underline">Inicio</a>
                                 </li>
                                 <li>
-                                {window.location.pathname == '/' ? <a href="#about" className="hover:underline">Historia</a> : <Link to="/" className="hover:underline">Historia</Link>}
+                                <a href="#about" className="hover:underline">Historia</a>
                                 </li>
                                 <li>
-                                    <Link to="/maps" className="hover:underline">Mapas</Link>
+                                    <a href="https://blackmaps.vercel.app/maps" className="hover:underline">Mapas</a>
                                 </li>
                             </ul>
                         </div>
