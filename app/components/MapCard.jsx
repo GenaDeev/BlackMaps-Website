@@ -1,3 +1,4 @@
+import Image from "next/image"; 
 export default function MapCard(props) {
     const { title, map, tweet, mapid, date, likes } = props;
     return (
@@ -5,9 +6,11 @@ export default function MapCard(props) {
             className="h-[500px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-gray-700"
         >
             <a href={map}>
-                <img
+                <Image
                     loading="lazy"
-                    className="rounded-t-lg w-full h-56"
+                    className="rounded-t-lg"
+                    width={350}
+                    height={224}
                     src={map}
                     alt={"Mapa de BlackMaps titulado: " + title}
                 />
