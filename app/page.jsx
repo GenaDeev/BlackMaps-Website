@@ -63,8 +63,8 @@ export default function Home() {
                                 2020</span>, con el cual empezaria una emocionante historia que
                             data hasta el dia de hoy en <span className="font-bold">2024</span>. En aquella epoca Maps
                             escribia sus tuits en ingles, por lo que su primer mapa
-                            publicado se llama <span className="font-bold">"Life expectancy by country"</span>, es decir
-                            <span className="font-bold">"Esperanza de vida por pais"</span>.
+                            publicado se llama <span className="font-bold">&quot;Life expectancy by country&quot;</span>, es decir 
+                            <span className="font-bold"> &quot;Esperanza de vida por pais&quot;</span>.
                         </p>
                         <div className="flex mt-4 items-center justify-center flex-wrap gap-24">
                             <Image
