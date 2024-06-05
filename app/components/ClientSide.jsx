@@ -109,14 +109,14 @@ export default function ClientSide() {
                             <MapCard likes={likes} key={id} title={title} mapid={id} date={date} map={map} tweet={tweet} />
                         ))}
                     </div>
-                    <nav className="p-4 flex justify-center">
-                        <ul className="inline-flex -space-x-px text-xs">
+                    <nav className="p-2 sm:p-4 flex justify-center">
+                        <ul className="inline-flex flex-wrap -space-x-px text-xs">
                             <li>
                                 <button className={`flex items-center justify-center px-3 h-8 ms-0 leading-tight text-neutral-500 bg-white border border-e-0 border-neutral-300 rounded-s-lg hover:bg-neutral-100 hover:text-neutral-700 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-white ${isFirstPage ? 'cursor-not-allowed opacity-50' : ''}`} onClick={() => !isFirstPage && paginate(currentPage - 1)}>Anterior</button>
                             </li>
                             {pageNumbers.map(number => (
                                 <li key={number}>
-                                    <button className={`flex items-center justify-center px-3 h-8 leading-tight text-neutral-500 bg-white border ${currentPage === number ? 'border-blue-600 text-blue-600 bg-blue-50' : 'border-neutral-300'} hover:bg-neutral-100 hover:text-neutral-700 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-white`} onClick={() => paginate(number)}>Pagina {number}</button>
+                                    <button className={`flex items-center justify-center px-3 h-8 leading-tight text-neutral-500 bg-white border ${currentPage === number ? 'border-blue-600 text-blue-600 bg-blue-50' : 'border-neutral-300'} hover:bg-neutral-100 hover:text-neutral-700 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-white`} onClick={() => paginate(number)}>{screen.width >= 640 ? "Página: " + number : number}</button>
                                 </li>
                             ))}
                             <li>
