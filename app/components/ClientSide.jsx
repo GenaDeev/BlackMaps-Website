@@ -109,8 +109,8 @@ export default function ClientSide() {
                             <MapCard likes={likes} key={id} title={title} mapid={id} date={date} map={map} tweet={tweet} />
                         ))}
                     </div>
-                    <nav className="p-4 w-full flex justify-center">
-                        <ul className="inline-flex -space-x-px text-sm">
+                    <nav className="p-4 flex justify-center">
+                        <ul className="inline-flex -space-x-px text-xs">
                             <li>
                                 <button className={`flex items-center justify-center px-3 h-8 ms-0 leading-tight text-neutral-500 bg-white border border-e-0 border-neutral-300 rounded-s-lg hover:bg-neutral-100 hover:text-neutral-700 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-white ${isFirstPage ? 'cursor-not-allowed opacity-50' : ''}`} onClick={() => !isFirstPage && paginate(currentPage - 1)}>Anterior</button>
                             </li>
