@@ -8,7 +8,7 @@ export default function MapCard(props) {
             <a href={map}>
                 <Image
                     loading="lazy"
-                    className="rounded-t-lg"
+                    className="map-card rounded-t-lg"
                     width={350}
                     height={224}
                     src={map}
