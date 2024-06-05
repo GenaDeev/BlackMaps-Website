@@ -4,7 +4,7 @@ export default function ClientHeader() {
     return (
         <div className="flex gap-3">
                 {
-                    (window.location.href === "http://localhost:3000/") &&
+                    (window.location.href === "https://blackmaps.vercel.app/") &&
                     <a title="Mapas" className="gap-2 w-12 h-12 sm:w-auto flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold" href="https://blackmaps.vercel.app/maps">
                     <svg
                         className="dark:text-white text-[#1d1d1d] w-[32px] h-[32px] sm:w-[24px]"
