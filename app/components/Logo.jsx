@@ -1,3 +1,6 @@
+import localFont from 'next/font/local'
+const quickSans = localFont({ src: '../fonts/Quicksans.woff2' })
+
 export default function Logo(props) {
     const { width, height, className, svgclass } = props
     return (
@@ -14,14 +17,14 @@ export default function Logo(props) {
                 <text
                     id="black._"
                     data-name="black. "
-                    className="cls-1"
+                    className={quickSans.className}
                     transform="translate(-8.347 159.071) scale(4.188)"
                 >
                     black.
                 </text>
                 <text
                     id="maps"
-                    className="cls-1"
+                    className={quickSans.className}
                     transform="translate(133.654 287.071) scale(4.188)"
                 >
                     maps

@@ -86,7 +86,7 @@ export default function Home() {
                             <Logo
                                 width="128px"
                                 height="128px"
-                                className="dark:invert hover:scale-110 transition duration-500 filter hover:drop-shadow-custom-lg"
+                                className="logo dark:invert hover:scale-110 transition duration-500 filter hover:drop-shadow-custom-lg"
                             />
                         </div>
                     </div>

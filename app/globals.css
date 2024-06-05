@@ -63,9 +63,6 @@
   height: 224px;
 }
 
-@media screen and (max-width: 640px) {
-  @font-face {
-    font-family: "Quicksans Accurate ICG Fill";
-    src: url('https://blackmaps.vercel.app/fonts/QuickSans.woff2') format('woff2');
-  }
+.logo {
+  font-size: 56px;
 }

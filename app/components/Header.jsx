@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header className="fixed w-full p-2 z-50 bg-[#ccc] dark:bg-[#242424] flex justify-between items-center">
             <div className="flex">
-                <a href="https://blackmaps.vercel.app"><Logo svgclass="dark:invert" width="48px" height="48px" classNameName="text-white hover:scale-105 active:scale-95 transition active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2" /></a>
+                <a href="https://blackmaps.vercel.app"><Logo svgclass="dark:invert" width="48px" height="48px" className="logo text-white hover:scale-105 active:scale-95 transition active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2" /></a>
             </div>
             <div className="flex gap-3">
                 <a title="Mapas" className="gap-2 w-12 h-12 sm:w-auto flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold" href="https://blackmaps.vercel.app/maps">
