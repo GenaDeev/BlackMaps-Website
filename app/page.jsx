@@ -7,8 +7,16 @@ export const metadata = {
   keywords: ["Maps", "Twitter", "Black", "BlackMaps"],
   openGraph: {
     title: "Black Maps | Los mejores mapas, ahora online.",
-    description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos del X (antes Twitter) de BlackMaps pero en la Web, permitiendote descargarlos con la maxima calidad.",
+    description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos pero en la Web, permitiendote descargarlos con la maxima calidad.",
     images: 'https://blackmaps.vercel.app/og-home.png',
+  },
+twitter: {
+    card: 'summary_large_image',
+    title: 'Black Maps | Los mejores mapas, ahora online.',
+    description: 'Black Maps Web te proporciona acceso web a todos tus mapas favoritos pero en la Web, permitiendote descargarlos con la maxima calidad.',
+    creator: '@maps_black',
+    creatorId: '1274191176267071490',
+    images: ['https://blackmaps.vercel.app/og-home.png'],
   },
 };
 export default function Home() {
