@@ -1,16 +1,17 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function ClientHeader() {
     const [isMapsPage, setIsMapsPage] = useState(false);
-
+    const router = useRouter();
     useEffect(() => {
         if (window.location.pathname === "/maps") {
             setIsMapsPage(true);
         }
-    }, []);
+    }, [router]);
 
     return (
         <div className="flex gap-3">
