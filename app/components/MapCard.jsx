@@ -3,7 +3,7 @@ export default function MapCard(props) {
     const { title, map, tweet, mapid, date, likes } = props;
     return (
         <div
-            className="h-[500px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-gray-700"
+            className="h-[500px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-neutral-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-neutral-700"
         >
             <a href={map}>
                 <button title="Pantalla completa" className="transition duration-200 absolute p-2 dark:hover:bg-neutral-600/80 bg-neutral-200/50 hover:bg-white/80 dark:bg-black/80 rounded-full z-40 m-2">
