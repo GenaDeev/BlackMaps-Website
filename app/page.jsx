@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link'
 import Logo from './components/Logo'
 
 export const metadata = {
@@ -35,11 +36,11 @@ export default function Home() {
                                 hacemos un mapa.
                             </p>
                             <div className="links flex gap-3 justify-center flex-wrap">
-                                <a
+                                <Link
                                     title="Mapas"
                                     className="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
                                     href="/maps">Galeria de Mapas
-                                </a>
+                                </Link>
                                 <a
                                     title="Twitter"
                                     className="gap-2 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#3d3d3d] bg-[#aaa] rounded-xl p-2 font-bold flex-shrink-1"
