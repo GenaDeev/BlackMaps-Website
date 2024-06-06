@@ -10,7 +10,7 @@ export default function ClientSide() {
     const [loading, setLoading] = useState(true);
     const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
-    const mapsPerPage = 9;
+    const mapsPerPage = 15;
 
     useEffect(() => {
         setLoading(true);
