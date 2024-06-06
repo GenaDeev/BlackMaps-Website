@@ -1,7 +1,7 @@
 import "./globals.css";
 import Footer from './components/Footer';
 import Header from './components/Header';
-
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({ children }) {
   return (
@@ -63,6 +63,7 @@ export default function RootLayout({ children }) {
       <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white">
         <Header/>
         {children}
+        <Analytics/>
         <Footer/>
         </body>
     </html>
