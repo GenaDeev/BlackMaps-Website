@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from './components/Footer';
 import Header from './components/Header';
+import PageTransition from './components/PageTransition';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -65,7 +66,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white">
         <Header/>
+        <PageTransition>
         {children}
+        </PageTransition>
         <Analytics/>
         <SpeedInsights/>
         <Footer/>
