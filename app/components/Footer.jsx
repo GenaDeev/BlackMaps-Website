@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import Link from 'next/link'
 
 export default function Footer() {
     return (
@@ -6,22 +7,22 @@ export default function Footer() {
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <a href="https://blackmaps.vercel.app/" className="flex items-center">
+                        <Link href="/" className="flex items-center">
                             <Logo className="dark:invert logo" width="128px" height="128px" />
-                        </a>
+                        </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Secciones</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
                                 <li>
-                                    <a href="https://blackmaps.vercel.app" className="hover:underline">Inicio</a>
+                                    <Link href="https://blackmaps.vercel.app" className="hover:underline">Inicio</Link>
                                 </li>
                                 <li>
                                 <a href="#about" className="hover:underline">Historia</a>
                                 </li>
                                 <li>
-                                    <a href="https://blackmaps.vercel.app/maps" className="hover:underline">Mapas</a>
+                                    <Link href="/maps" className="hover:underline">Mapas</Link>
                                 </li>
                             </ul>
                         </div>
@@ -43,7 +44,7 @@ export default function Footer() {
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm sm:text-xs text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://blackmaps.vercel.app/" className="hover:underline">BlackMaps™</a> | Sitio web desarrollado por <a href="https://www.linkedin.com/in/genadev" className="hover:underline">GenaDev</a> y alojado por <a href="https://genahost.vercel.app/" className="hover:underline">GenaHost</a>. | Los mapas y logos del sitio son propiedad de BlackMaps y no deben ser utilizados sin autorizacion.
+                    <span className="text-sm sm:text-xs text-gray-500 sm:text-center dark:text-gray-400">© 2024 <Link href="/" className="hover:underline">BlackMaps™</Link> | Sitio web desarrollado por <a href="https://www.linkedin.com/in/genadev" className="hover:underline">GenaDev</a> y alojado por <a href="https://genahost.vercel.app/" className="hover:underline">GenaHost</a>. | Los mapas y logos del sitio son propiedad de BlackMaps y no deben ser utilizados sin autorizacion.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a title="Twitch" href="https://www.twitch.tv/mapsblack/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
