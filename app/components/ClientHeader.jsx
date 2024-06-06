@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
 export default function ClientHeader() {
-    const router = useRouter();
+    const pathname = usePathname();
 
     const linkStyle = {
-        display: router.asPath === "/maps" ? 'none' : 'flex',
+        display: pathname === "/maps" ? 'none' : 'flex',
     };
 
     return (
