@@ -8,6 +8,7 @@ export default function ClientSide() {
     const [currentPage, setCurrentPage] = useState(1);
     const [maps, setMaps] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const mapsPerPage = 9;
 
@@ -23,6 +24,12 @@ export default function ClientSide() {
                 console.error("Error fetching maps:", error);
                 setLoading(false);
             });
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const handleSearch = (query) => {
@@ -116,7 +123,9 @@ export default function ClientSide() {
                             </li>
                             {pageNumbers.map(number => (
                                 <li key={number}>
-                                    <button className={`flex items-center justify-center px-3 h-8 leading-tight text-neutral-500 bg-white border ${currentPage === number ? 'border-blue-600 text-blue-600 bg-blue-50' : 'border-neutral-300'} hover:bg-neutral-100 hover:text-neutral-700 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-white`} onClick={() => paginate(number)}>{screen.width >= 640 ? "Página: " + number : number}</button>
+                                    <button className={`flex items-center justify-center px-3 h-8 leading-tight text-neutral-500 bg-white border ${currentPage === number ? 'border-blue-600 text-blue-600 bg-blue-50' : 'border-neutral-300'} hover:bg-neutral-100 hover:text-neutral-700 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-white`} onClick={() => paginate(number)}>
+                                        {screenWidth > 1080 ? `Pagina: ${number}` : number}
+                                    </button>
                                 </li>
                             ))}
                             <li>
