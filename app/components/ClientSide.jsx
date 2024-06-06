@@ -79,12 +79,12 @@ export default function ClientSide() {
                     placeholder="Buscar..."
                     value={searchQuery}
                     onChange={(e) => handleSearch(e.target.value)}
-                    className="px-4 h-10 border border-gray-500 dark:placeholder:text-white placeholder:text-[#3d3d3d] dark:bg-[#3d3d3d] rounded-md focus:outline-none focus:border-[#3d3d3d] dark:focus:border-[#fff] mb-4 md:mb-0"
+                    className="px-4 h-10 border border-neutral-500 dark:placeholder:text-white placeholder:text-[#3d3d3d] dark:bg-[#3d3d3d] rounded-md focus:outline-none focus:border-[#3d3d3d] dark:focus:border-[#fff] mb-4 md:mb-0"
                 />
                 <select
                     value={sortCriteria}
                     onChange={(e) => handleSort(e.target.value)}
-                    className="bg-white px-4 h-10 border text-[#3d3d3d] dark:text-white border-gray-500 dark:bg-[#3d3d3d] rounded-md focus:outline-none focus:border-[#3d3d3d] dark:focus:border-[#fff]"
+                    className="bg-white px-4 h-10 border text-[#3d3d3d] dark:text-white border-neutral-500 dark:bg-[#3d3d3d] rounded-md focus:outline-none focus:border-[#3d3d3d] dark:focus:border-[#fff]"
                 >
                     <option value="date-desc">Fecha (más reciente)</option>
                     <option value="date-asc">Fecha (más antigua)</option>
@@ -96,7 +96,7 @@ export default function ClientSide() {
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(index => (
                         <div
                             key={index}
-                            className="h-[500px] w-[350px] max-w-sm flex flex-col bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-gray-700"
+                            className="h-[500px] w-[350px] max-w-sm flex flex-col bg-white border border-neutral-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-neutral-700"
                         >
                             <a className="image-loading loading rounded">
                             </a>
