@@ -8,7 +8,7 @@ export default function ClientSide() {
     const [currentPage, setCurrentPage] = useState(1);
     const [maps, setMaps] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     const mapsPerPage = 9;
 
@@ -27,9 +27,11 @@ export default function ClientSide() {
     }, []);
 
     useEffect(() => {
-        const handleResize = () => setScreenWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        if (typeof window !== 'undefined') {
+            const handleResize = () => setScreenWidth(window.innerWidth);
+            window.addEventListener("resize", handleResize);
+            return () => window.removeEventListener("resize", handleResize);
+        }
     }, []);
 
     const handleSearch = (query) => {
