@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@maps_black" />
-        <link rel="preload" href="https://blackmaps.vercel.app/bg-map-d.webp" as="image"> 
+        <link rel="preload" href="https://blackmaps.vercel.app/bg-map.webp" as="image"> 
         <link rel="preload" href="https://blackmaps.vercel.app/bg-map-l.webp" as="image"> 
         <link
           rel="apple-touch-icon"
