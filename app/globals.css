@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 ::-moz-selection {
-  color: black;
-  background: white;
+  color: white;
+  background: black;
 }
 
 ::selection {
-  color: black;
-  background: white;
+  color: white;
+  background: black;
 }
 
 .hero {
@@ -21,13 +21,13 @@
     background: url("https://blackmaps.vercel.app/bg-map.webp");
   }
 ::-moz-selection {
-  color: white;
-  background: black;
+  color: black;
+  background: white;
 }
 
 ::selection {
-  color: white;
-  background: black;
+  color: black;
+  background: white;
 }
 
 }
