@@ -114,9 +114,9 @@ export default function ClientSide() {
             ) : (
                 <div>
                     <div className="maps-container flex flex-wrap gap-8 items-center justify-center pt-24 pb-16 px-4">
-                        {currentMaps.map(({ title, map, tweet, id, date, likes }) => (
-                            <MapCard likes={likes} key={id} title={title} mapid={id} date={date} map={map} tweet={tweet} mapsm={mapsm}/>
-                        ))}
+                        {currentMaps.map(({ title, map, tweet, id, date, likes, mapsm }) => (
+    <MapCard likes={likes} key={id} title={title} mapid={id} date={date} map={map} tweet={tweet} mapsm={mapsm} />
+))}
                     </div>
                     <nav className="p-2 sm:p-4 flex justify-center">
                         <ul className="inline-flex flex-wrap -space-x-px text-xs">
