@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+::-moz-selection {
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
 .hero {
   background: url("https://blackmaps.vercel.app/bg-map-l.webp");
 }
@@ -10,6 +20,16 @@
   .hero {
     background: url("https://blackmaps.vercel.app/bg-map.webp");
   }
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
 }
 
 .cls-1 {
