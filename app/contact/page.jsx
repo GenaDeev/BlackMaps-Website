@@ -17,6 +17,9 @@ export const metadata = {
         creatorId: '1274191176267071490',
         images: ['https://blackmaps.vercel.app/og-home.png'],
     },
+    alternates: {
+        canonical: 'https://blackmaps.vercel.app/contact',
+    }
 };
 
 export default function ContactPage() {

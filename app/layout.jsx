@@ -52,7 +52,6 @@ export default function RootLayout({ children }) {
 
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href="https://blackmaps.vercel.app/" />
 
         <link rel="manifest" href="https://blackmaps.vercel.app/manifest.json" />
 

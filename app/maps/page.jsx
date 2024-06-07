@@ -4,21 +4,24 @@ export const metadata = {
     description: "Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.",
     keywords: ["Maps", "Twitter", "Black", "BlackMaps"],
     openGraph: {
-      title: "Black Maps | Galeria de Mapas",
-      description: "Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.",
-      images: 'https://blackmaps.vercel.app/og-maps.png',
+        title: "Black Maps | Galeria de Mapas",
+        description: "Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.",
+        images: 'https://blackmaps.vercel.app/og-maps.png',
     },
-twitter: {
-    card: 'summary_large_image',
-    title: 'Black Maps | Galeria de Mapas',
-    description: 'Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.',
-    creator: '@maps_black',
-    creatorId: '1274191176267071490',
-    images: ['https://blackmaps.vercel.app/og-maps.png'],
-  },
-  };
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Black Maps | Galeria de Mapas',
+        description: 'Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.',
+        creator: '@maps_black',
+        creatorId: '1274191176267071490',
+        images: ['https://blackmaps.vercel.app/og-maps.png'],
+    },
+    alternates: {
+        canonical: 'https://blackmaps.vercel.app/maps',
+    }
+};
 export default function MapsPage() {
-    
+
     return (
         <main className="flex flex-col">
             <div className="pt-20 px-12 sm:px-20 my-12 items-center flex flex-col">
@@ -29,7 +32,7 @@ export default function MapsPage() {
                     Todos los mapas publicados por Mapitas Negros desde la creacion
                     de su cuenta.
                 </h2>
-                <ClientSide/>
+                <ClientSide />
             </div>
         </main>
     )
