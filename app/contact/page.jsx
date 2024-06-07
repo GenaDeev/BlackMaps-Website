@@ -1,8 +1,26 @@
 import ContactForm from '../components/ContactForm';
 
+export const metadata = {
+    title: "Black Maps | Contactanos",
+    description: "Para nosotros lo mas importante es tu opinion. Comunicate las 24hs para enviarnos tus sugerencias, dudas o problemas mediante multiples canales de contacto.",
+    keywords: ["Maps", "Twitter", "Black", "BlackMaps"],
+    openGraph: {
+        title: "Black Maps | Contactanos",
+        description: "Para nosotros lo mas importante es tu opinion. Comunicate las 24hs para enviarnos tus sugerencias, dudas o problemas mediante multiples canales de contacto.",
+        images: 'https://blackmaps.vercel.app/og-home.png',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Black Maps | Contactanos',
+        description: 'Para nosotros lo mas importante es tu opinion. Comunicate las 24hs para enviarnos tus sugerencias, dudas o problemas mediante multiples canales de contacto.',
+        creator: '@maps_black',
+        creatorId: '1274191176267071490',
+        images: ['https://blackmaps.vercel.app/og-home.png'],
+    },
+};
+
 export default function ContactPage() {
     return (
-
         <section className="bg-white dark:bg-neutral-900 pt-20">
             <div className="container px-6 py-12 mx-auto">
                 <div>
