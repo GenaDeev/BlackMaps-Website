@@ -24,6 +24,9 @@ export default function Footer() {
                                 <li>
                                     <Link href="/maps" className="hover:underline">Mapas</Link>
                                 </li>
+                                <li>
+                                    <Link href="/contact" className="hover:underline">Contacto</Link>
+                                </li>
                             </ul>
                         </div>
                         <div>
