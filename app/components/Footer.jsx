@@ -16,7 +16,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Secciones</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium flex flex-col gap-4">
                                 <li>
-                                    <Link href="https://blackmaps.vercel.app" className="hover:underline">Inicio</Link>
+                                    <Link href="/" className="hover:underline">Inicio</Link>
                                 </li>
                                 <li>
                                 <a href="#about" className="hover:underline">Historia</a>

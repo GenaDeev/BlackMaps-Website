@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: "Black Maps | Los mejores mapas, ahora online",
         description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos permitiéndote descargarlos con la máxima calidad. Descubre un mundo de información y visualización sin precedentes.",
-        images: "https://blackmaps.vercel.app/og-home.png",
+        images: "https://blackmaps.com.ar/og-home.png",
     },
     twitter: {
         card: "summary_large_image",
@@ -17,10 +17,10 @@ export const metadata = {
         description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos permitiéndote descargarlos con la máxima calidad. Sumérgete en la experiencia visual que hemos preparado para ti.",
         creator: "@maps_black",
         creatorId: "1274191176267071490",
-        images: ["https://blackmaps.vercel.app/og-home.png"],
+        images: ["https://blackmaps.com.ar/og-home.png"],
     },
     alternates: {
-        canonical: "https://blackmaps.vercel.app",
+        canonical: "https://blackmaps.com.ar",
     }
 };
 

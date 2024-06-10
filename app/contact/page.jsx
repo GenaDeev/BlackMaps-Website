@@ -7,7 +7,7 @@ export const metadata = {
     openGraph: {
         title: "Black Maps | Contactanos",
         description: "Para nosotros lo más importante es tu opinión. Comunícate las 24 horas para enviarnos tus sugerencias, dudas o problemas mediante múltiples canales de contacto.",
-        images: 'https://blackmaps.vercel.app/og-home.png',
+        images: 'https://blackmaps.com.ar/og-home.png',
     },
     twitter: {
         card: 'summary_large_image',
@@ -15,10 +15,10 @@ export const metadata = {
         description: 'Para nosotros lo más importante es tu opinión. Comunícate las 24 horas para enviarnos tus sugerencias, dudas o problemas mediante múltiples canales de contacto.',
         creator: '@maps_black',
         creatorId: '1274191176267071490',
-        images: ['https://blackmaps.vercel.app/og-home.png'],
+        images: ['https://blackmaps.com.ar/og-home.png'],
     },
     alternates: {
-        canonical: 'https://blackmaps.vercel.app/contact',
+        canonical: 'https://blackmaps.com.ar/contact',
     }
 };
 
