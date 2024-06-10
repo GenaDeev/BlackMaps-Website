@@ -1,4 +1,6 @@
 import ClientSide from '../components/ClientSide';
+import Error from '../components/ErrorMessage';
+
 export const metadata = {
     title: "Black Maps | Galeria de Mapas",
     description: "Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.",
@@ -32,6 +34,7 @@ export default function MapsPage() {
                 <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl">
                     Explora una recopilación exhaustiva de todos los mapas que han sido compartidos por la vibrante comunidad de Mapitas Negros desde los albores de su cuenta hasta la fecha presente. Desde fascinantes diagramas urbanos hasta intrincadas representaciones cartográficas, esta galería ofrece una ventana única hacia la diversidad de narrativas geoespaciales que han surgido en el universo de los Mapitas Negros.
                 </h2>
+                <Error type="warning" message="Atención: Esta página se encuntra en desarrollo constante, por lo que los mapas más recientes no se encuentran aquí. Cuando logremos ponernos al día con la subida de mapas este mensaje habrá desaparecido. Lamentamos las Molestias."/>
                 <ClientSide />
             </div>
         </main>
