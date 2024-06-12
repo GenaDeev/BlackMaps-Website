@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
     title: "Black Maps | Los mejores mapas, ahora online",
-    description: "Black Maps Web te proporciona acceso a todos tus mapas favoritos con la máxima calidad. Explora, descarga y disfruta de nuestros mapas únicos, todos creados con un enfoque en la precisión y el detalle.",
+    description: "Black Maps Web te proporciona acceso a todos los mapas de Black Maps con la máxima calidad. Explora, descarga y disfruta de nuestros mapas únicos.",
     keywords: ["Mapas", "Twitter", "BlackMaps", "Cartografía", "Exploración"],
     openGraph: {
         title: "Black Maps | Los mejores mapas, ahora online",
@@ -100,7 +100,8 @@ export default function Home() {
                     <div className="md:w-1/2">
                         <h3 className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-6xl">¿Qué carajo sube?</h3>
                         <p className="text-[#3d3d3d] dark:text-gray-400">
-                            Black Maps sube diversos tipos de <strong>mapas</strong>, desde los más <strong>cómicos</strong> hasta los más <strong>serios</strong>. Sus <strong>mapas</strong> abarcan múltiples <strong>temas</strong>, tanto <strong>políticos</strong>, <strong>sociales</strong> o simplemente <strong>territoriales</strong>. Uno de sus tipos de <strong>mapa</strong> más populares son aquellos donde utiliza el servicio de Google Trends para mostrar las <strong>búsquedas más comunes</strong> de los países.
+                            Black Maps sube diversos tipos de <strong>mapas</strong>, desde los más <strong>cómicos</strong> hasta los
+                            más serios. Sus mapas abarcan múltiples temas, tanto políticos, sociales o simplemente territoriales. Uno de sus tipos de mapa más populares son aquellos donde utiliza el servicio de Google Trends para mostrar las búsquedas más comunes de los países.
                         </p>
                     </div>
                 </article>
