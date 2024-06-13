@@ -2,7 +2,7 @@ import Logo from "./Logo.jsx"
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
  
-const ClientHeader = dynamic(() => import('../components/ClientHeader.jsx), {
+const ClientHeader = dynamic(() => import('../components/ClientHeader.jsx'), {
   loading: () => <p></p>,
 })
 
