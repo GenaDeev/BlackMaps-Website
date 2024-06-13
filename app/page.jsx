@@ -63,7 +63,7 @@ export default function Home() {
                     <div className="md:w-1/2">
                         <h3 className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-6xl">Orígenes de Black Maps</h3>
                         <p className="text-[#3d3d3d] dark:text-gray-400">
-                            <strong>Black Maps</strong> subió su primer mapa el <strong>20 de junio de 2020</strong>, marcando el inicio de una apasionante travesía en el mundo de la cartografía digital. A partir de ese momento, hemos crecido hasta convertirnos en un referente en la creación de mapas únicos y detallados, explorando temáticas diversas y ofreciendo una perspectiva visual única.
+                            Black Maps subió su primer mapa el <strong>20 de junio de 2020</strong>, marcando el inicio de una <strong>apasionante travesía en el mundo de la cartografía digital</strong>. A partir de ese momento, hemos crecido hasta convertirnos en un referente en la creación de mapas únicos y detallados, explorando temáticas diversas y ofreciendo una perspectiva visual única.
                         </p>
                     </div>
                 </article>
