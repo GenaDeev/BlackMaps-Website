@@ -1,7 +1,11 @@
 import Logo from "./Logo.jsx"
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+ 
+const ClientHeader = dynamic(() => import('../components/ClientHeader.jsx), {
+  loading: () => <p></p>,
+})
 
-import ClientHeader from "./ClientHeader.jsx"
 export default function Header() {
     return (
         <header className="overflow-x-hidden sm:overflow-x-auto fixed w-full p-2 z-50 backdrop-blur-md border-b border-b-neutral-500 dark:border-neutral-800 flex justify-between items-center">
