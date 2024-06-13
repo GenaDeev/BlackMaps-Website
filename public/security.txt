@@ -1,0 +1,4 @@
+Contact: mailto:security@blackmaps.com.ar
+Expires: 2025-06-13T03:00:00.000Z
+Preferred-Languages: en, es
+Canonical: https://blackmaps.com.ar/security.txt
