@@ -1,4 +1,3 @@
-"use client"
 export default function ErrorMessage(props) {
     const { type, message } = props;
 
