@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({ children }) {
   return (
-    <html className="scroll-smooth" lang="es">
+    <html lang="es">
       <head>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/webp" href="https://blackmaps.com.ar/image/favicon.webp" />

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-moz-selection {
   color: white;
   background: black;
@@ -31,12 +35,6 @@
 }
 
 }
-
-.cls-1 {
-  font-size: 60px;
-  font-family: "Quicksans Accurate ICG Fill";
-}
-
 .map-card {
   width: 350px !important;
   height: 224px !important;
