@@ -13,12 +13,12 @@
 }
 
 .hero {
-  background: url("https://blackmaps.com.ar/bg-map-l.webp");
+  background: url("https://blackmaps.com.ar/image/bg-map-l.webp");
 }
 
 @media (prefers-color-scheme: dark) {
   .hero {
-    background: url("https://blackmaps.com.ar/bg-map.webp");
+    background: url("https://blackmaps.com.ar/image/bg-map.webp");
   }
 ::-moz-selection {
   color: black;
