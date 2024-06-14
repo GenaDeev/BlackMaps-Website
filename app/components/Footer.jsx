@@ -16,16 +16,16 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Secciones</h2>
                             <ul className="font-medium flex flex-col gap-4">
                                 <li>
-                                    <Link href="/" className="hover:underline">Inicio</Link>
+                                    <Link href="/" className="hover:underline">Página de Inicio</Link>
                                 </li>
                                 <li>
-                                <a href="#about" className="hover:underline">Historia</a>
+                                <a href="#about" className="hover:underline">Nuestra Historia</a>
                                 </li>
                                 <li>
                                     <Link href="/maps" className="hover:underline">Mapas</Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact" className="hover:underline">Contacto</Link>
+                                    <Link href="/contact" className="hover:underline">Formulario de Contacto</Link>
                                 </li>
                             </ul>
                         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
                                     <a href="https://github.com/GenaAaaj/BlackMaps-Website/blob/main/LICENSE" className="hover:underline">Licencia</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/genadev" className="hover:underline">GenaDev</a>
+                                    <a href="https://www.linkedin.com/in/genadev" className="hover:underline">@GenaDev</a>
                                 </li>
                             </ul>
                         </div>
