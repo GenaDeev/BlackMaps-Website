@@ -1,4 +1,5 @@
 module.exports = {
+    config.optimization.minimize = false;
     images: {
         remotePatterns: [
           {
