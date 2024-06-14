@@ -22,7 +22,7 @@ export default function Footer() {
                                 <a href="#about" className="hover:underline">Nuestra Historia</a>
                                 </li>
                                 <li>
-                                    <Link href="/maps" className="hover:underline">Todod mis Mapas</Link>
+                                    <Link href="/maps" className="hover:underline">Todos mis Mapas</Link>
                                 </li>
                                 <li>
                                     <Link href="/contact" className="hover:underline">Formulario de Contacto</Link>
