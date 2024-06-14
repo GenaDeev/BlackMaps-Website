@@ -1,15 +1,14 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
+"use client";
+import { useEffect, useState } from 'react';
+import styles from './animation.module.css';
 export default function Template({ children }) {
+  const [isAnimating, setIsAnimating] = useState(false);
+  useEffect(() => {
+    setIsAnimating(true);
+  }, []);
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: 'easeInOut', duration: 0.125 }}
-    >
+    <div className={`${styles.container} ${isAnimating ? styles.animate : ''}`}>
       {children}
-    </motion.div>
-  )
+    </div>
+  );
 }
