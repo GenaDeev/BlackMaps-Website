@@ -8,7 +8,7 @@ export const metadata = {
     openGraph: {
         title: "Black Maps | Galeria de Mapas",
         description: "Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.",
-        images: 'https://blackmaps.com.ar/og-maps.png',
+        images: 'https://blackmaps.com.ar/image/og-maps.png',
     },
     twitter: {
         card: 'summary_large_image',
@@ -16,7 +16,7 @@ export const metadata = {
         description: 'Todos los mapas de Black Maps, archivados en una web multipagina y con filtros de busqueda. Imagenes en alta resolucipn y enlace a los posts originales.',
         creator: '@maps_black',
         creatorId: '1274191176267071490',
-        images: ['https://blackmaps.com.ar/og-maps.png'],
+        images: ['https://blackmaps.com.ar/image/og-maps.png'],
     },
     alternates: {
         canonical: 'https://blackmaps.com.ar/maps',

@@ -9,34 +9,34 @@ export default function RootLayout({ children }) {
     <html className="scroll-smooth" lang="es">
       <head>
         <meta charSet="utf-8" />
-        <link rel="icon" type="image/webp" href="https://blackmaps.com.ar/favicon.webp" />
+        <link rel="icon" type="image/webp" href="https://blackmaps.com.ar/image/favicon.webp" />
         <meta property="fb:app_id" content="1179608519718137" />
         <meta property="og:site_name" content="Black Maps" />
         <meta property="og:locale" content="es_MX" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@maps_black" />
-        <link rel="preload" href="https://blackmaps.com.ar/bg-map.webp" as="image"/> 
-        <link rel="preload" href="https://blackmaps.com.ar/bg-map-l.webp" as="image"/> 
+        <link rel="preload" href="https://blackmaps.com.ar/image/bg-map.webp" as="image"/> 
+        <link rel="preload" href="https://blackmaps.com.ar/image/bg-map-l.webp" as="image"/> 
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="https://blackmaps.com.ar/at-180.png"
+          href="https://blackmaps.com.ar/image/at-180.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="120x120"
-          href="https://blackmaps.com.ar/at-120.png"
+          href="https://blackmaps.com.ar/image/at-120.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="167x167"
-          href="https://blackmaps.com.ar/at-167.png"
+          href="https://blackmaps.com.ar/image/at-167.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="152x152"
-          href="https://blackmaps.com.ar/at-152.png"
+          href="https://blackmaps.com.ar/image/at-152.png"
         />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="Black Maps" />
 
         <meta name="msapplication-TileColor" content="#333333" />
-        <meta name="msapplication-TileImage" content="https://blackmaps.com.ar/mstile-144x144.png" />
+        <meta name="msapplication-TileImage" content="https://blackmaps.com.ar/image/mstile-144x144.png" />
         <meta name="msapplication-config" content="https://blackmaps.com.ar/browserconfig.xml" />
         <meta name="theme-color" content="#333333" />
 

@@ -8,7 +8,7 @@ export const metadata = {
     openGraph: {
         title: "Black Maps | Los mejores mapas, ahora online",
         description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos permitiéndote descargarlos con la máxima calidad. Descubre un mundo de información y visualización sin precedentes.",
-        images: "https://blackmaps.com.ar/og-home.png",
+        images: "https://blackmaps.com.ar//image/og-home.png",
     },
     twitter: {
         card: "summary_large_image",
@@ -16,7 +16,7 @@ export const metadata = {
         description: "Black Maps Web te proporciona acceso web a todos tus mapas favoritos permitiéndote descargarlos con la máxima calidad. Sumérgete en la experiencia visual que hemos preparado para ti.",
         creator: "@maps_black",
         creatorId: "1274191176267071490",
-        images: ["https://blackmaps.com.ar/og-home.png"],
+        images: ["https://blackmaps.com.ar//image/og-home.png"],
     },
     alternates: {
         canonical: "https://blackmaps.com.ar",
@@ -53,7 +53,7 @@ export default function Home() {
                     <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
                         <Image
                             loading="lazy"
-                            src="/first-map.webp"
+                            src="/image/first-map.webp"
                             className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
                             alt="Primer Mapa de Black Maps"
                             width={400}
@@ -78,7 +78,7 @@ export default function Home() {
                     <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
                         <Image
                             loading="lazy"
-                            src="/agus-p1.webp"
+                            src="/image/agus-p1.webp"
                             className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
                             alt="Agustín Sánchez, más conocido como Black Maps"
                             width={400}
@@ -90,7 +90,7 @@ export default function Home() {
                     <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
                         <Image
                             loading="lazy"
-                            src="/map-example-1.webp"
+                            src="/image/map-example-1.webp"
                             className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
                             alt="Mapa de Black Maps llamado: Club de ESTADOS UNIDOS 🇺🇸 más buscado en Google por país (desde 2004)"
                             width={400}
