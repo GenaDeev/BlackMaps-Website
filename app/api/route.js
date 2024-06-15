@@ -9,11 +9,16 @@ export async function POST(req) {
   try {
     const { firstname, lastname, address, message } = await req.json();
 
+    // Validación de campos requeridos
+    if (!firstname || !lastname || !address || !message) {
+      throw new Error('Faltan campos requeridos en la solicitud');
+    }
+
     // Define el mensaje de correo
     const msg = {
       from: {
         email: 'ayuda@blackmaps.com.ar',
-        name: firstname + ' ' + lastname
+        name: `${firstname} ${lastname}`
       },
       personalizations: [
         {
@@ -35,17 +40,19 @@ export async function POST(req) {
 
     // Envía el correo
     await sgMail.send(msg);
+
     return NextResponse.json({ success: true, message: 'Correo enviado exitosamente' });
   } catch (error) {
     console.error('Error al enviar el correo:', error);
-    return NextResponse.json({ success: false, error: 'Error al enviar el correo' }, { status: 500 });
+
+    let errorMessage = 'Error al enviar el correo';
+    let statusCode = 500;
+
+    if (error.message.includes('Faltan campos requeridos')) {
+      errorMessage = error.message;
+      statusCode = 400; // Bad Request
+    }
+
+    return NextResponse.json({ success: false, error: errorMessage }, { status: statusCode });
   }
-}
-export async function GET() {
-  return NextResponse.json({
-    error: 405,
-    message: 'No puedes usar GET en /api',
-    author: 'GenaHost by GenaDev',
-    linkedin: 'https://www.linkedin.com/in/genadev'
-  }, { status: 405 });
 }
