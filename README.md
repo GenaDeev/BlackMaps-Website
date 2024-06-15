@@ -33,6 +33,8 @@ Este sitio web ha sido desarrollado por **[GenaDev](https://www.linkedin.com/in/
 
 ## Estructura del Proyecto
 ### Framework: **[NextJS 14.2.4](http://nextjs.org)**
+![BlackMaps Logo](public/image/readme-framework.webp)
+Using APP Router
 ```plaintext
 🌍 public/
     ├── image/(imagenes y mapas)
