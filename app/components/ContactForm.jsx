@@ -65,6 +65,7 @@ export default function ContactForm() {
                         <div className="flex-1 px-2">
                             <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Nombre</label>
                             <input
+                                required
                                 type="text"
                                 name="nombre"
                                 value={formData.nombre}
@@ -77,6 +78,7 @@ export default function ContactForm() {
                         <div className="flex-1 px-2 mt-4 md:mt-0">
                             <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Apellido</label>
                             <input
+                                required
                                 type="text"
                                 name="apellido"
                                 value={formData.apellido}
@@ -90,6 +92,7 @@ export default function ContactForm() {
                     <div className="mt-4">
                         <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Correo electrónico</label>
                         <input
+                            required
                             type="email"
                             name="email"
                             value={formData.email}
@@ -102,6 +105,7 @@ export default function ContactForm() {
                     <div className="w-full mt-4">
                         <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Mensaje</label>
                         <textarea
+                            required
                             name="mensaje"
                             value={formData.mensaje}
                             onChange={handleChange}
