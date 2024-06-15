@@ -41,3 +41,11 @@ export async function POST(req) {
     return NextResponse.json({ success: false, error: 'Error al enviar el correo' }, { status: 500 });
   }
 }
+export async function GET() {
+  return NextResponse.json({
+    error: 405,
+    message: 'No puedes usar GET en /api',
+    author: 'GenaHost by GenaDev',
+    linkedin: 'https://www.linkedin.com/in/genadev'
+  }, { status: 405 });
+}
