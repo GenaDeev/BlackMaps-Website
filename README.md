@@ -32,18 +32,39 @@ Este sitio web ha sido desarrollado por **[GenaDev](https://www.linkedin.com/in/
 © 2024 **[BlackMaps™](https://blackmaps.vercel.app/)**. Sitio web desarrollado por **[GenaDev](https://www.linkedin.com/in/genadev)** y alojado por **[GenaHost](https://genahost.vercel.app/)**. Los mapas y logos del sitio son propiedad de BlackMaps y no deben ser utilizados sin autorización.
 
 ## Estructura del Proyecto
-
+### Framework: **[NextJS 14.2.4](http://nextjs.org)**
 ```plaintext
 🌍 public/
-    └── (imágenes y mapas)
-🚧 src/
+    ├── image/(imagenes y mapas)
+    ├── 🗺️ sitemap.xml
+    ├── 🤖 robots.txt
+    ├── 📱 manifest.json
+    ├── 🖼️ favicon.ico (alternative favicon for non headed pages)
+    └── ⚙️ browserconfig.xml
+🚧 app/
     ├── 🧩components/
-    │     ├── Footer.jsx
-    │     ├── Header.jsx
-    │     ├── MapCard.jsx
-    │     └── Logo.jsx
-    ├── 📱pages/
-    │     ├── maps/
-    │     │   └── MapPage.jsx (map gallery)
-    │     └───🏨Home.jsx (homepage)
-    └── 🌱App.jsx (react-router)
+    │     ├── Footer.jsx (🌐server)
+    │     ├── Header.jsx (🌐server)
+    │     ├── MapCard.jsx (🌐server)
+    │     ├── ClientHeader.jsx (💻client)
+    │     ├── ContactForm.jsx (💻client)
+    │     ├── ErrorMessage.jsx (🌐server)
+    │     ├── Pathname.jsx (💻client)
+    │     ├── ClientSide.jsx (💻client)
+    │     └── Logo.jsx (🌐server)
+    │
+    ├── 🔤fonts/
+    │     └── Logo.jsx (🌐server)
+    │
+    ├── ☎️contact/ (/contact subpage)
+    │     └── page.jsx
+    │
+    ├── 🗺️maps/ (/maps subpage)
+    │     └── page.jsx
+    │
+    ├── 🎨 animation.module.css (page animation)
+    ├── 🎨 globals.css (global styles)
+    ├── 🌱 layout.jsx (layout for creating pages)
+    ├── ❌ not-found.jsx (404 page)
+    ├── 🏠 page.jsx (Home Page)
+    └── 🎞️ template.jsx (template that applies page animations)
