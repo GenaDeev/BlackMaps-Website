@@ -9,27 +9,48 @@ export default function ContactForm() {
         mensaje: ''
     });
     const [isCompleted, setIsCompleted] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevData => ({ ...prevData, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Aquí iría la lógica de envío del formulario, por ejemplo, enviar datos a un servidor
 
-        // Después del envío, marcar el formulario como completado
-        setIsCompleted(true);
+        try {
+            const response = await fetch('/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    firstname: formData.nombre,
+                    lastname: formData.apellido,
+                    address: formData.email,  // Si 'address' debe ser 'email'
+                    message: formData.mensaje
+                })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setIsCompleted(true);
+            } else {
+                throw new Error(result.error || 'Error al enviar el correo');
+            }
+        } catch (error) {
+            console.error('Error al enviar el correo:', error);
+            setErrorMessage(error.message || 'Hubo un error al enviar tu mensaje. Por favor, intenta nuevamente.');
+        }
     };
 
     return (
         <div className="p-4 py-6 rounded-lg bg-neutral-50 dark:bg-neutral-800 md:p-8">
             {isCompleted ? (
                 <div className="flex flex-col items-center justify-center h-full">
-                    {/* SVG animado de email */}
                     <div className="mb-4">
-                        {/* Sustituye el siguiente div por el SVG animado */}
                         <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-bounce">
                             <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z" fill='currentColor'/>
                         </svg>
@@ -88,6 +109,12 @@ export default function ContactForm() {
                             placeholder="Tus dudas, sugerencias o comentarios."
                         ></textarea>
                     </div>
+
+                    {errorMessage && (
+                        <p className="mt-4 text-sm text-red-600 dark:text-red-400">
+                            {errorMessage}
+                        </p>
+                    )}
 
                     <button
                         type="submit"
