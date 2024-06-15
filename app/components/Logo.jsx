@@ -15,22 +15,18 @@ export default function Logo(props) {
             >
                 <defs></defs>
                 <text
-                    id="black._"
-                    data-name="black. "
                     className={quickSans.className}
                     transform="translate(-8.347 159.071) scale(4.188)"
                 >
                     black.
                 </text>
                 <text
-                    id="maps"
                     className={quickSans.className}
                     transform="translate(133.654 287.071) scale(4.188)"
                 >
                     maps
                 </text>
                 <image
-                    id="Capa_1"
                     data-name="Capa 1"
                     x={134}
                     y={333}
