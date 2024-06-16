@@ -30,7 +30,8 @@ export default function Home() {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-lg sm:p-0 p-12">
-                        <h1 className="mb-5 text-5xl font-bold">🌍<br />¡Bienvenido/a a Black Maps!</h1>
+                        <p className="text-5xl font-bold">🌍</p>
+                        <h1 className="mb-5 text-5xl font-bold">¡Sitio web de Black Maps!</h1>
                         <h2 className="mb-5 text-xl">
                             Este es el sitio web oficial de <strong>Black Maps</strong>, una cuenta de X (antes Twitter) que se dedica a publicar mapas sobre todo tipo de temas. Si algo existe, le hacemos un mapa. Desde geopolítica hasta datos curiosos, aquí encontrarás un mapa para todo.
                         </h2>
@@ -60,7 +61,7 @@ export default function Home() {
                             height={200}
                         />
                     </div>
-                    <div className="md:w-1/2">
+                    <div className="flex flex-col gap-8 md:w-1/2">
                         <h3 className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-6xl">Orígenes de Black Maps</h3>
                         <p className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
                             Black Maps subió su primer mapa el <strong>20 de junio de 2020</strong>, marcando el inicio de una <strong>apasionante travesía en el mundo de la cartografía digital</strong>. A partir de ese momento, hemos crecido hasta convertirnos en un referente en la creación de mapas únicos y detallados, explorando temáticas diversas y ofreciendo una perspectiva visual única.
@@ -69,7 +70,7 @@ export default function Home() {
                 </article>
 
                 <article className="flex flex-col md:flex-row w-full gap-8 bg-white dark:bg-[#3d3d3d] items-center justify-center rounded-xl p-12">
-                    <div className="md:w-1/2">
+                    <div className="flex flex-col gap-8 md:w-1/2">
                         <h3 className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-6xl">¿Quién es Black Maps?</h3>
                         <p className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
                             Black Maps es el seudónimo de Agustín Sánchez, un joven argentino con una profunda pasión por la cartografía y la visualización de datos. Nació el <strong>12 de diciembre</strong> y es un ávido seguidor del Club Atlético River Plate. Comparte su vida con 4 adorables gatos: dos marrones, uno tricolor y otro gris, quienes inspiran su trabajo diario con su curiosa presencia.
@@ -97,13 +98,14 @@ export default function Home() {
                             height={200}
                         />
                     </div>
-                    <div className="md:w-1/2">
+                    <div className="flex flex-col gap-8 md:w-1/2">
                         <h3 className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-6xl">¿Qué carajo sube?</h3>
                         <p className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
                             Black Maps sube diversos tipos de mapas, desde los más cómicos hasta los más serios. Sus mapas abarcan múltiples temas, tanto <strong>políticos, sociales o simplemente territoriales</strong>. Uno de sus tipos de mapa más populares son aquellos donde utiliza el servicio de <strong>Google Trends</strong> para mostrar las búsquedas más comunes de los países.
                         </p>
                     </div>
                 </article>
+                <p className="hidden seo-declaration-title">Black Maps | Los mejores mapas, ahora online.</p>
             </section>
         </main>
     );
