@@ -33,7 +33,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Desarrollo</h2>
                             <ul className="font-medium flex flex-col gap-4">
                                 <li>
-                                    <a href="https://github.com/GenaAaaj/BlackMaps-Website/" className="hover:underline ">Repositorio</a>
+                                    <a href="https://github.com/GenaDeev/BlackMaps-Website" className="hover:underline ">Repositorio</a>
                                 </li>
                                 <li>
                                     <a href="https://github.com/GenaAaaj/BlackMaps-Website/blob/main/LICENSE" className="hover:underline">Licencia</a>
