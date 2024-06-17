@@ -1,5 +1,5 @@
 import localFont from 'next/font/local'
-const quickSans = localFont({ src: '../fonts/BlackMapsLogoFont.woff2' })
+const quickSans = localFont({ src: '../../fonts/BlackMapsLogoFont.woff2' })
 
 export default function Logo(props) {
     const { width, height, className, svgclass } = props

@@ -1,12 +1,18 @@
-import "./globals.css";
+import "../globals.css";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import i18nConfig from '@/i18nConfig';
+import { dir } from 'i18next';
 
-export default function RootLayout({ children }) {
+export function generateStaticParams() {
+  return i18nConfig.locales.map(locale => ({ locale }));
+}
+
+export default function RootLayout({ children, params: { locale } }) {
   return (
-    <html lang="es">
+    <html lang={locale} dir={locale}>
       <head>
         <link rel="icon" type="image/webp" href="https://blackmaps.com.ar/image/favicon.webp" />
         <meta property="fb:app_id" content="1179608519718137" />
@@ -48,7 +54,10 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileImage" content="https://blackmaps.com.ar/image/mstile-144x144.png" />
         <meta name="msapplication-config" content="https://blackmaps.com.ar/browserconfig.xml" />
         <meta name="theme-color" content="#333333" />
-
+        {locale === "es" ?
+          <link rel="alternate" hrefLang="en" href="https://blackmaps.com.ar/en" />:
+          <link rel="alternate" hrefLang="es" href="https://blackmaps.com.ar/" />
+        }
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
 
@@ -62,11 +71,11 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="blackmaps, mapas, twitter, web, negro" />
       </head>
       <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white">
-        <Header/>
+        <Header locale={locale}/>
         {children}
         <Analytics/>
         <SpeedInsights/>
-        <Footer/>
+        <Footer locale={locale}/>
         </body>
     </html>
   );

@@ -1,7 +1,20 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ContactForm() {
+    const [lang, setLang] = useState("")
+
+    useEffect(() => {
+        const pathname = window.location.pathname;
+        const hasEn = pathname.startsWith("/en");
+
+        if (hasEn) {
+            setLang("en");
+        } else {
+            setLang("es");
+        }
+    }, []);
+
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
@@ -56,61 +69,61 @@ export default function ContactForm() {
                         </svg>
                     </div>
                     <p className="text-2xl text-center font-semibold text-neutral-700 dark:text-neutral-300">
-                        Tu mensaje ha sido enviado correctamente.
+                        {lang === "es" ? "Tu mensaje ha sido enviado correctamente." : "Your message has been sent successfully."}
                     </p>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit}>
                     <div className="-mx-2 md:items-center md:flex">
                         <div className="flex-1 px-2">
-                            <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Nombre</label>
+                            <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">{lang === "es" ? "Nombre" : "Name"}</label>
                             <input
                                 required
                                 type="text"
                                 name="nombre"
                                 value={formData.nombre}
                                 onChange={handleChange}
-                                placeholder="Juan"
+                                placeholder={lang === "es" ? "Juan" : "John"}
                                 className="block w-full px-5 py-2.5 mt-2 text-neutral-700 placeholder-neutral-400 bg-white border border-neutral-200 rounded-lg dark:placeholder-neutral-600 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                             />
                         </div>
 
                         <div className="flex-1 px-2 mt-4 md:mt-0">
-                            <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Apellido</label>
+                            <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">{lang === "es" ? "Apellido" : "Last Name"}</label>
                             <input
                                 required
                                 type="text"
                                 name="apellido"
                                 value={formData.apellido}
                                 onChange={handleChange}
-                                placeholder="Perez"
+                                placeholder={lang === "es" ? "Perez" : "Doe"}
                                 className="block w-full px-5 py-2.5 mt-2 text-neutral-700 placeholder-neutral-400 bg-white border border-neutral-200 rounded-lg dark:placeholder-neutral-600 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                             />
                         </div>
                     </div>
 
                     <div className="mt-4">
-                        <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Correo electrónico</label>
+                        <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Email</label>
                         <input
                             required
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="juanperez@blackmaps.com.ar"
+                            placeholder={lang === "es" ? "juanperez@blackmaps.com.ar" : "johndoe@blackmaps.com.ar"}
                             className="block w-full px-5 py-2.5 mt-2 text-neutral-700 placeholder-neutral-400 bg-white border border-neutral-200 rounded-lg dark:placeholder-neutral-600 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
 
                     <div className="w-full mt-4">
-                        <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">Mensaje</label>
+                        <label className="block mb-2 text-sm text-neutral-600 dark:text-neutral-200">{lang === "es" ? "Asunto" : "Subject"}</label>
                         <textarea
                             required
                             name="mensaje"
                             value={formData.mensaje}
                             onChange={handleChange}
                             className="block w-full h-32 px-5 py-2.5 mt-2 text-neutral-700 placeholder-neutral-400 bg-white border border-neutral-200 rounded-lg md:h-56 dark:placeholder-neutral-600 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                            placeholder="Tus dudas, sugerencias o comentarios."
+                            placeholder={lang === "es" ? "Tus dudas, sugerencias o comentarios." : "Your doubts, suggestions or comments."}
                         ></textarea>
                     </div>
 
@@ -124,7 +137,7 @@ export default function ContactForm() {
                         type="submit"
                         className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
                     >
-                        Enviar
+                        {lang === "es" ? "Enviar" : "Send"}
                     </button>
                 </form>
             )}
