@@ -94,7 +94,7 @@ export default function Home() {
                             />
                         </div>
                         <div itemScope itemType="https://schema.org/Question" className="flex flex-col gap-8 md:w-1/2">
-                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Orígenes de Black Maps</h3>
+                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">¿Cómo inició Black Maps?</h3>
                             <div itemProp="suggestedAnswer" itemScope itemType="https://schema.org/Answer">
                                 <p itemProp="text" className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
                                     Black Maps subió su primer mapa el <strong>20 de junio de 2020</strong>, marcando el inicio de una <strong>apasionante travesía en el mundo de la cartografía digital</strong>. A partir de ese momento, hemos crecido hasta convertirnos en un referente en la creación de mapas únicos y detallados, explorando temáticas diversas y ofreciendo una perspectiva visual única.
@@ -135,7 +135,7 @@ export default function Home() {
                             />
                         </div>
                         <div itemScope itemType="https://schema.org/Question" className="flex flex-col gap-8 md:w-1/2">
-                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">¿Qué carajo sube?</h3>
+                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">¿Qué sube Black Maps?</h3>
                             <div itemProp="suggestedAnswer" itemScope itemType="https://schema.org/Answer">
                                 <p className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
                                     Black Maps sube diversos tipos de mapas, desde los más cómicos hasta los más serios. Sus mapas abarcan múltiples temas, tanto <strong>políticos, sociales o simplemente territoriales</strong>. Uno de sus tipos de mapa más populares son aquellos donde utiliza el servicio de <strong>Google Trends</strong> para mostrar las búsquedas más comunes de los países.
