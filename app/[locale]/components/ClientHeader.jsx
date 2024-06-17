@@ -2,10 +2,42 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
+import i18nConfig from '@/i18nConfig';
+
 export default function ClientHeader() {
     const pathname = usePathname();
     const [lang, setLang] = useState("")
+    const { i18n } = useTranslation();
+    const currentLocale = i18n.language;
+    const router = useRouter();
+    const currentPathname = usePathname();
 
+    const handleChange = e => {
+        const newLocale = e.target.value;
+
+        // set cookie for next-i18n-router
+        const days = 30;
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        const expires = date.toUTCString();
+        document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
+
+        // redirect to the new locale path
+        if (
+            currentLocale === i18nConfig.defaultLocale &&
+            !i18nConfig.prefixDefault
+        ) {
+            router.push('/' + newLocale + currentPathname);
+        } else {
+            router.push(
+                currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+            );
+        }
+
+        router.refresh();
+    };
     useEffect(() => {
         const pathname = window.location.pathname;
         const hasEn = pathname.startsWith("/en");
@@ -27,6 +59,10 @@ export default function ClientHeader() {
 
     return (
         <div className="flex gap-3">
+            <select onChange={handleChange} value={currentLocale}>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+            </select>
             <Link title={lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''} style={mapsLinkStyle} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/maps">
                 <svg
                     className="dark:text-white text-[#1d1d1d] w-[32px] h-[32px] sm:w-[24px]"
