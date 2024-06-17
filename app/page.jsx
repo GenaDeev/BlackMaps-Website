@@ -41,7 +41,7 @@ export default function Home() {
     return (
         <>
             <Script
-                id="faq-schema"
+                id="org-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(jsonLd),
