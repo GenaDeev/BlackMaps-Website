@@ -5,6 +5,7 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Página de Contacto",
+    "image": "https://blackmaps.com.ar/image/og-home.png",
     "url": "https://blackmaps.com.ar/contact",
 }
 
