@@ -6,12 +6,6 @@ const jsonLd = {
     "@type": "ContactPage",
     "name": "Página de Contacto",
     "url": "https://blackmaps.com.ar/contact",
-    "ContactPoint": {
-        "@type": "ContactPoint",
-        "email": "ayuda@blackmaps.com.ar", 
-        "contactType": "Customer Service",
-        "availableLanguage": ["Spanish", "English"]
-    }
 }
 
 export const metadata = {

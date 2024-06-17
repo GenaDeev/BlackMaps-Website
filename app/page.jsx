@@ -12,7 +12,13 @@ const jsonLd = {
     },
     "url": "https://blackmaps.com.ar",
     "sameAs": ["https://x.com/maps_black"],
-    "logo": "https://blackmaps.com.ar/app-icon-1024.webp"
+    "logo": "https://blackmaps.com.ar/app-icon-1024.webp",
+    "ContactPoint": {
+        "@type": "ContactPoint",
+        "email": "ayuda@blackmaps.com.ar", 
+        "contactType": "Customer Service",
+        "availableLanguage": ["Spanish", "English"]
+    }
 };
 
 export const metadata = {
