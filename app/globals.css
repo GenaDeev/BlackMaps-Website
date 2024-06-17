@@ -84,3 +84,18 @@ html {
 .logo {
   font-size: 56px;
 }
+.flag-icon, .flag-icon-background {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+}
+
+.flag-icon-es {
+  background-image: url(https://3000-idx-blackmaps-website-1718661190981.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev/image/flags/es.svg)
+}
+.flag-icon-en {
+  background-image: url(https://3000-idx-blackmaps-website-1718661190981.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev/image/flags/en.svg)
+}

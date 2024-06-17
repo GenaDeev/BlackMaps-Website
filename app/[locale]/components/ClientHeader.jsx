@@ -8,47 +8,38 @@ import i18nConfig from '@/i18nConfig';
 
 export default function ClientHeader() {
     const pathname = usePathname();
-    const [lang, setLang] = useState("")
     const { i18n } = useTranslation();
     const currentLocale = i18n.language;
     const router = useRouter();
     const currentPathname = usePathname();
+    const [lang, setLang] = useState(currentLocale); // Initialize lang with currentLocale
+    const [newLocale, setNewLocale] = useState(currentLocale);
 
-    const handleChange = e => {
-        const newLocale = e.target.value;
+    const handleChange = (e) => {
+        const selectedLocale = e.target.value;
+        setNewLocale(selectedLocale); // Update newLocale state with selected value
 
-        // set cookie for next-i18n-router
+        // Set cookie for next-i18n-router
         const days = 30;
         const date = new Date();
         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = date.toUTCString();
-        document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
+        document.cookie = `NEXT_LOCALE=${selectedLocale};expires=${expires};path=/`;
 
-        // redirect to the new locale path
-        if (
-            currentLocale === i18nConfig.defaultLocale &&
-            !i18nConfig.prefixDefault
-        ) {
-            router.push('/' + newLocale + currentPathname);
+        // Redirect to the new locale path
+        if (currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault) {
+            router.push('/' + selectedLocale + currentPathname);
         } else {
-            router.push(
-                currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-            );
+            router.push(currentPathname.replace(`/${currentLocale}`, `/${selectedLocale}`));
         }
 
         router.refresh();
     };
+
     useEffect(() => {
-        const pathname = window.location.pathname;
-        const hasEn = pathname.startsWith("/en");
-
-        if (hasEn) {
-            setLang("en");
-        } else {
-            setLang("es");
-        }
-    }, []);
-
+        // Initialize lang state based on currentLocale
+        setLang(currentLocale);
+    }, [currentLocale]); // Update lang whenever currentLocale changes
 
     const mapsLinkStyle = {
         display: pathname === "/maps" ? 'none' : 'flex',
@@ -59,10 +50,17 @@ export default function ClientHeader() {
 
     return (
         <div className="flex gap-3">
-            <select onChange={handleChange} value={currentLocale}>
-                <option value="es">Español</option>
-                <option value="en">Inglés</option>
-            </select>
+            <div className="langselect flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold">
+                <span className={`flag-icon flag-icon-${lang === "en" ? "en" : "es"} block`}></span>
+                <select className='hidden sm:block bg-transparent rounded-xl outline-none h-full' onChange={handleChange} value={currentLocale}>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <select className='sm:hidden text-xl block bg-transparent rounded-xl outline-none h-full' onChange={handleChange} value={currentLocale}>
+                    <option value="es">🇪🇸</option>
+                    <option value="en">🇬🇧</option>
+                </select>
+            </div>
             <Link title={lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''} style={mapsLinkStyle} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/maps">
                 <svg
                     className="dark:text-white text-[#1d1d1d] w-[32px] h-[32px] sm:w-[24px]"
@@ -72,7 +70,6 @@ export default function ClientHeader() {
                 >
                     <path d="m9 6.882-7-3.5v13.236l7 3.5 6-3 7 3.5V7.382l-7-3.5-6 3zM15 15l-6 3V9l6-3v9z" />
                 </svg>
-
                 <p className="hidden sm:block">{lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''}</p>
             </Link>
             <Link title={lang === "en" ? "Contact" : lang === "es" ? "Contacto" : ''} style={contactLinkStyle} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/contact">
