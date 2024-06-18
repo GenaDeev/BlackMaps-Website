@@ -27,6 +27,8 @@ const jsonLd = {
 };
 export async function generateMetadata({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);
+const baseUrl = "https://blackmaps.com.ar";
+    const canonicalUrl = locale && locale !== 'default' ? `${baseUrl}/${locale}` : baseUrl;
     return {
         title: t('meta_title'),
         description: t('meta_description'),
@@ -45,7 +47,7 @@ export async function generateMetadata({ params: { locale } }) {
             images: ["https://blackmaps.com.ar/image/og-home.png"],
         },
         alternates: {
-            canonical: "https://blackmaps.com.ar",
+            canonical: canonicalUrl,
         }
     };
 }
