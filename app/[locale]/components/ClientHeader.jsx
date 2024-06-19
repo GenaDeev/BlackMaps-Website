@@ -57,8 +57,8 @@ export default function ClientHeader() {
                     <option label='English' className='langselect gap-2 flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold' value="en">English</option>
                 </select>
                 <select aria-label="Language" className='sm:hidden text-xl block bg-transparent rounded-xl outline-none h-full' onChange={handleChange} value={currentLocale}>
-                    <option label='Español' value="es">🇪🇸</option>
-                    <option label='English' value="en">🇬🇧</option>
+                    <option value="es">🇪🇸</option>
+                    <option value="en">🇬🇧</option>
                 </select>
             </div>
             <Link title={lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''} style={mapsLinkStyle} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/maps">
