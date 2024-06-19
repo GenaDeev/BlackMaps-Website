@@ -94,8 +94,8 @@ html {
 }
 
 .flag-icon-es {
-  background-image: url(http://localhost:3000/image/flags/es.svg)
+  background-image: url(https://blackmaps.com.ar/image/flags/es.svg)
 }
 .flag-icon-en {
-  background-image: url(http://localhost:3000/image/flags/en.svg);
+  background-image: url(https://blackmaps.com.ar/image/flags/en.svg);
 }
