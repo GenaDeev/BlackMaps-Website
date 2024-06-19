@@ -13,6 +13,18 @@ const jsonLd = {
     "url": "https://blackmaps.com.ar/maps"
 };
 
+export async function generateSchemas(t, locale) {
+    const baseUrl = "https://blackmaps.com.ar"
+    const schema_url = locale && locale !== 'default' ? `${baseUrl}/${locale}/maps` : baseUrl;
+    return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": t('schema_name'),
+        "description": t('schema_description'),
+        "url": schema_url,
+    }
+}
+
 export async function generateMetadata({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);
     const baseUrl = "https://blackmaps.com.ar";

@@ -25,6 +25,32 @@ const jsonLd = {
         "availableLanguage": ["Spanish", "English"]
     }
 };
+
+export async function generateSchemas(t, locale) {
+    const baseUrl = "https://blackmaps.com.ar"
+    const schema_url = locale && locale !== 'default' ? `${baseUrl}/${locale}` : baseUrl;
+    return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Black Maps",
+        "description": t('schema_description'),
+        "founder": {
+            "@type": "Person",
+            "name": "Agustín Sánchez"
+        },
+        "image": "https://blackmaps.com.ar/image/og-home.png",
+        "url": schema_url,
+        "sameAs": ["https://x.com/maps_black"],
+        "logo": "https://blackmaps.com.ar/image/app-icon-1024.webp",
+        "ContactPoint": {
+            "@type": "ContactPoint",
+            "email": "ayuda@blackmaps.com.ar",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Spanish", "English"]
+        }
+    }
+}
+
 export async function generateMetadata({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);
 const baseUrl = "https://blackmaps.com.ar";
@@ -54,24 +80,19 @@ const baseUrl = "https://blackmaps.com.ar";
 
 export default async function Home({ params: { locale } }) {
     const { t, resources } = await initTranslations(locale, i18nNamespaces);
-    
+    const schemas = await generateSchemas(t, locale);
+    const schemaJSON = JSON.stringify(schemas);
+
     return (
         <TranslationsProvider
             namespaces={i18nNamespaces}
             locale={locale}
             resources={resources}>
             <Script
-                id="col-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(jsonLd),
-                }}
-            />
-            <Script
                 id="org-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(jsonLd),
+                    __html: JSON.stringify(schemaJSON),
                 }}
             />
 

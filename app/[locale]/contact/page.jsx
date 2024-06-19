@@ -4,18 +4,21 @@ import TranslationsProvider from '../components/TranslationsProvider';
 import initTranslations from '../../i18n';
 const i18nNamespaces = ['contact'];
 
-const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Página de Contacto",
-    "image": "https://blackmaps.com.ar/image/og-home.png",
-    "url": "https://blackmaps.com.ar/contact",
+export async function generateSchemas(t, locale) {
+    const baseUrl = "https://blackmaps.com.ar"
+    const schema_url = locale && locale !== 'default' ? `${baseUrl}/${locale}/contact` : baseUrl;
+    return {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": t('schema_name'),
+        "image": "https://blackmaps.com.ar/image/og-home.png",
+        "url": schema_url,
+    }
 }
-
 
 export async function generateMetadata({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);
-const baseUrl = "https://blackmaps.com.ar";
+    const baseUrl = "https://blackmaps.com.ar";
     const canonicalUrl = locale && locale !== 'default' ? `${baseUrl}/${locale}/contact` : baseUrl;
     return {
         title: t('meta_title'),
@@ -42,6 +45,8 @@ const baseUrl = "https://blackmaps.com.ar";
 
 export default async function ContactPage({ params: { locale } }) {
     const { t, resources } = await initTranslations(locale, i18nNamespaces);
+    const schemas = await generateSchemas(t, locale);
+    const schemaJSON = JSON.stringify(schemas);
 
     return (
         <TranslationsProvider
@@ -52,7 +57,7 @@ export default async function ContactPage({ params: { locale } }) {
                 id="ctc-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(jsonLd),
+                    __html: JSON.stringify(schemaJSON),
                 }}
             />
             <main className="bg-white dark:bg-neutral-900 pt-20">
