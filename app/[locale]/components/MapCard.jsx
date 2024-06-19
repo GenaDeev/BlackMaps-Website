@@ -1,12 +1,34 @@
 import Image from "next/image"; 
 export default function MapCard(props) {
-    const { title, map, tweet, mapid, date, likes, mapsm } = props;
+    const { title, map, tweet, mapid, date, likes, mapsm, locale } = props;
+
+    const translations = {
+        es: {
+            fullScreenTitle: "Pantalla completa",
+            mapAlt: `Mapa de BlackMaps titulado: ${title}`,
+            fromTwitter: "de",
+            uploadedBy: "Subido por",
+            goToTweet: "Ir al tweet",
+            mapNumber: `Este es el mapa numero ${mapid} de Black Maps`
+        },
+        en: {
+            fullScreenTitle: "Full screen",
+            mapAlt: `BlackMaps map titled: ${title}`,
+            fromTwitter: "from",
+            uploadedBy: "Uploaded by",
+            goToTweet: "Go to tweet",
+            mapNumber: `This is map number ${mapid} from Black Maps`
+        }
+    };
+
+    const t = translations[locale] || translations.es;
+
     return (
         <div
             className="h-[500px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-neutral-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-neutral-700"
         >
             <a href={map}>
-                <button title="Pantalla completa" className="transition duration-200 absolute p-2 dark:hover:bg-neutral-600/80 bg-neutral-200/50 hover:bg-white/80 dark:bg-black/80 rounded-full z-40 m-2">
+                <button title={t.fullScreenTitle} className="transition duration-200 absolute p-2 dark:hover:bg-neutral-600/80 bg-neutral-200/50 hover:bg-white/80 dark:bg-black/80 rounded-full z-40 m-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z"></path></svg>
                 </button>
                 <Image
@@ -15,7 +37,7 @@ export default function MapCard(props) {
                     width={350}
                     height={224}
                     src={mapsm}
-                    alt={"Mapa de BlackMaps titulado: " + title}
+                    alt={t.mapAlt}
                 />
             </a>
             <div className="p-5 flex flex-col justify-between">
@@ -32,18 +54,6 @@ export default function MapCard(props) {
                             </svg>
                             {date}
                         </div>
-                        {/*<div className="flex items-center gap-2">
-                            <svg
-                                className="w-5 h-5"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                style={{ fill: "currentColor", transform: "", msfilter: "" }}
-                            >
-                                <path d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z" />
-                            </svg>
-
-                            {likes}
-                            </div>*/}
                     </div>
                     <a href={tweet}>
                         <h5
@@ -53,7 +63,7 @@ export default function MapCard(props) {
                         </h5>
                     </a>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        de <a href={tweet} className="font-bold text-[#eee]">Twitter</a>. Subido por <span className="font-bold text-[#eee]">BlackMaps</span>
+                        {t.fromTwitter} <a href={tweet} className="font-bold text-[#eee]">Twitter</a>. {t.uploadedBy} <span className="font-bold text-[#eee]">BlackMaps</span>
                     </p>
                 </div>
                 <div className="flex w-full justify-between items-center">
@@ -61,7 +71,7 @@ export default function MapCard(props) {
                         href={tweet}
                         className="inline-flex items-center px-3 py-2 text-sm font-medium text-center transition duration-200 text-white bg-[#1d9bf0] rounded-full hover:bg-[#45a1df] focus:ring-4 focus:outline-none focus:ring-[#308aff] dark:bg-[#1d9bf0] dark:hover:bg-[#45a1df] dark:focus:ring-[#308aff]"
                     >
-                        Ir al tweet
+                        {t.goToTweet}
                         <svg
                             className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                             aria-hidden="true"
@@ -79,11 +89,12 @@ export default function MapCard(props) {
                     </a>
                     <h6
                         className="px-1 cursor-pointer rounded-full dark:bg-[#2d2d2d]"
-                        title={"Este es el mapa numero " + mapid + " de Black Maps"}
+                        title={t.mapNumber}
                     >
                         #{mapid}
                     </h6>
                 </div>
             </div>
-        </div>)
+        </div>
+    );
 }

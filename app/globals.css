@@ -89,13 +89,13 @@ html {
   background-size: contain;
   background-position: 50%;
   width: 24px;
-  height: 24px;
-  border-radius: 8px;
+  height: 16px;
+  border-radius: 6px;
 }
 
 .flag-icon-es {
-  background-image: url(https://blackmaps.com.ar/image/flags/es.svg)
+  background-image: url(http://localhost:3000/image/flags/es.svg)
 }
 .flag-icon-en {
-  background-image: url(https://blackmaps.com.ar/image/flags/en.svg)
+  background-image: url(http://localhost:3000/image/flags/en.svg);
 }
