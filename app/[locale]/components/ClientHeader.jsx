@@ -53,12 +53,12 @@ export default function ClientHeader() {
             <div className="langselect gap-1 flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold">
                 <span className={`flag-icon flag-icon-${lang === "en" ? "en" : "es"} block`}></span>
                 <select className='hidden sm:block pb-[1px] bg-transparent rounded-xl outline-none h-full' onChange={handleChange} value={currentLocale}>
-                    <option className='langselect gap-2 flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold' value="es">Español</option>
-                    <option className='langselect gap-2 flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold' value="en">English</option>
+                    <option label='Español' className='langselect gap-2 flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold' value="es">Español</option>
+                    <option label='English' className='langselect gap-2 flex w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold' value="en">English</option>
                 </select>
                 <select className='sm:hidden text-xl block bg-transparent rounded-xl outline-none h-full' onChange={handleChange} value={currentLocale}>
-                    <option value="es">🇪🇸</option>
-                    <option value="en">🇬🇧</option>
+                    <option label='Español' value="es">🇪🇸</option>
+                    <option label='English' value="en">🇬🇧</option>
                 </select>
             </div>
             <Link title={lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''} style={mapsLinkStyle} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/maps">
