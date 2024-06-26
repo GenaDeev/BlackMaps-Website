@@ -6,8 +6,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import i18nConfig from '@/i18nConfig';
 import { dir } from 'i18next';
 
-if (!locales.include(locale)) notFound()
-
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));
 }
