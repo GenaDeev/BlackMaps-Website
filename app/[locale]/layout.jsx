@@ -4,7 +4,6 @@ import Header from './components/Header';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import i18nConfig from '@/i18nConfig';
-import { dir } from 'i18next';
 
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));

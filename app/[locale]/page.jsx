@@ -5,27 +5,6 @@ import TranslationsProvider from './components/TranslationsProvider';
 const i18nNamespaces = ['home'];
 import initTranslations from '../i18n';
 
-const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Black Maps",
-    "description": "Es una cuenta de Twitter conocida por crear mapas entretenidos y variados para sus seguidores.",
-    "founder": {
-        "@type": "Person",
-        "name": "Agustín Sánchez"
-    },
-    "image": "https://blackmaps.com.ar/image/og-home.png",
-    "url": "https://blackmaps.com.ar",
-    "sameAs": ["https://x.com/maps_black"],
-    "logo": "https://blackmaps.com.ar/image/app-icon-1024.webp",
-    "ContactPoint": {
-        "@type": "ContactPoint",
-        "email": "ayuda@blackmaps.com.ar",
-        "contactType": "Customer Service",
-        "availableLanguage": ["Spanish", "English"]
-    }
-};
-
 export async function generateSchemas(t, locale) {
     const baseUrl = "https://blackmaps.com.ar"
     const schema_url = locale && locale !== 'default' ? `${baseUrl}/${locale}` : baseUrl;
