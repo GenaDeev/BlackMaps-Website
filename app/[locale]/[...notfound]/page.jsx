@@ -8,13 +8,13 @@ export async function generateMetadata({ params: { locale } }) {
         title: 'Black Maps | ' + t('meta_title'),
         description: t('meta_description'),
         openGraph: {
-            title: t('meta_title'),
+            title: 'Black Maps | ' + t('meta_title'),
             description: t('meta_description'),
             images: "https://blackmaps.com.ar/image/og-nf.png",
         },
         twitter: {
             card: "summary_large_image",
-            title: t('meta_title'),
+            title: 'Black Maps | ' + t('meta_title'),
             description: t('meta_description'),
             creator: "@maps_black",
             creatorId: "1274191176267071490",
