@@ -53,8 +53,6 @@ export default function RootLayout({ children, params: { locale } }) {
         <meta name="msapplication-TileImage" content="https://blackmaps.com.ar/image/mstile-144x144.png" />
         <meta name="msapplication-config" content="https://blackmaps.com.ar/browserconfig.xml" />
         <meta name="theme-color" content="#333333" />
-          <link rel="alternate" hrefLang="en" href="https://blackmaps.com.ar/en" />
-          <link rel="alternate" hrefLang="es" href="https://blackmaps.com.ar/" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
 

@@ -2,6 +2,26 @@ import Pathname from "../components/Pathname"
 const i18nNamespaces = ['notfound'];
 import initTranslations from '../../i18n';
 
+export async function generateMetadata({ params: { locale } }) {
+    const { t } = await initTranslations(locale, i18nNamespaces);
+    return {
+        title: t('meta_title'),
+        description: t('meta_description'),
+        openGraph: {
+            title: t('meta_title'),
+            description: t('meta_description'),
+            images: "https://blackmaps.com.ar/image/og-nf.png",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: t('meta_title'),
+            description: t('meta_description'),
+            creator: "@maps_black",
+            creatorId: "1274191176267071490",
+            images: ["https://blackmaps.com.ar/image/og-nf.png"],
+        },
+    };
+}
 
 export default async function NotFoundPage({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);

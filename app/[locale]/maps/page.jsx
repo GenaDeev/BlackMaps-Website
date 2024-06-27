@@ -48,6 +48,10 @@ export async function generateMetadata({ params: { locale } }) {
         },
         alternates: {
             canonical: canonicalUrl,
+            languages: {
+                'x-default': "https://blackmaps.com.ar/maps",
+                'en': "https://blackmaps.com.ar/en/maps",
+            }
         }
     };
 }
