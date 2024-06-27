@@ -11,7 +11,7 @@ export async function generateSchemas(t, locale) {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": t('schema_name'),
-        "image": "https://blackmaps.com.ar/image/og-home.png",
+        "image": "https://blackmaps.com.ar/image/og-contact.png",
         "url": schema_url,
     }
 }
@@ -27,7 +27,7 @@ export async function generateMetadata({ params: { locale } }) {
         openGraph: {
             title: t('meta_title'),
             description: t('meta_description'),
-            images: "https://blackmaps.com.ar/image/og-home.png",
+            images: "https://blackmaps.com.ar/image/og-contact.png",
         },
         twitter: {
             card: "summary_large_image",
@@ -35,7 +35,7 @@ export async function generateMetadata({ params: { locale } }) {
             description: t('meta_description'),
             creator: "@maps_black",
             creatorId: "1274191176267071490",
-            images: ["https://blackmaps.com.ar/image/og-home.png"],
+            images: ["https://blackmaps.com.ar/image/og-contact.png"],
         },
         alternates: {
             canonical: canonicalUrl,
