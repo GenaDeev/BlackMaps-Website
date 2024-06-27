@@ -5,7 +5,7 @@ import initTranslations from '../../i18n';
 export async function generateMetadata({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);
     return {
-        title: t('meta_title'),
+        title: 'Black Maps | ' + t('meta_title'),
         description: t('meta_description'),
         openGraph: {
             title: t('meta_title'),
