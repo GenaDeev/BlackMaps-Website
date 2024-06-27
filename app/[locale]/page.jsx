@@ -33,7 +33,7 @@ export async function generateSchemas(t, locale) {
 export async function generateMetadata({ params: { locale } }) {
     const { t } = await initTranslations(locale, i18nNamespaces);
     const baseUrl = "https://blackmaps.com.ar";
-    const canonicalUrl = locale && locale !== 'default' ? `${baseUrl}/${locale}` : baseUrl;
+    const canonicalUrl = locale && locale !== 'default' ? `${baseUrl}/${locale !== 'es' ? locale : ''}` : baseUrl;
 
     return {
         title: t('meta_title'),
