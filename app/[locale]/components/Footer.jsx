@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import Link from 'next/link'
+import Image from "next/image";
 import TranslationsProvider from './TranslationsProvider';
 const i18nNamespaces = ['footer'];
 import initTranslations from '../../i18n';
@@ -15,9 +16,18 @@ export default async function Footer({ locale }) {
             <footer className="bg-[#ccc] dark:bg-[#242424]">
                 <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div className="md:flex md:justify-between">
-                        <div className="mb-6 md:mb-0">
-                            <Link title="Volver al Inicio" href="/" className="flex items-center">
+                        <div className="mb-6 md:mb-0 flex gap-3 items-center">
+                            <Link title="Volver al Inicio" href="/" className="hover:scale-95 transition duration-200 flex items-center">
                                 <Logo className="dark:invert logo" width="128px" height="128px" />
+                            </Link>
+                            <Link title="GenaDeev" href="https://www.linkedin.com/in/genadev" className="hover:scale-95 transition duration-200 ">
+                                <Image
+                                    src="/image/genadev-v-nobg-2.webp"
+                                    width={128}
+                                    height={128}
+                                    className="rounded-xl"
+                                    alt="Logo de GenaDev"
+                                />
                             </Link>
                         </div>
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
@@ -48,7 +58,7 @@ export default async function Footer({ locale }) {
                                         <a href="https://github.com/GenaAaaj/BlackMaps-Website/blob/main/LICENSE" className="hover:underline">{t('dev_license')}</a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/genadev" className="hover:underline">@GenaDev</a>
+                                        <a href="https://www.linkedin.com/in/genadev" className="hover:underline">@GenaDeev</a>
                                     </li>
                                 </ul>
                             </div>
@@ -56,7 +66,7 @@ export default async function Footer({ locale }) {
                     </div>
                     <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <span className="text-sm sm:text-xs  sm:text-center dark:text-white">© 2024 <Link href="/" className="hover:underline">BlackMaps™</Link> | {t('copy_1')} <a href="https://www.linkedin.com/in/genadev" className="hover:underline">GenaDev</a> {t('copy_2')} <a href="https://genahost.vercel.app/" className="hover:underline">GenaHost</a>. | {t('copy_3')}
+                        <span className="text-sm sm:text-xs  sm:text-center dark:text-white">© 2024 <Link href="/" className="hover:underline">BlackMaps™</Link> | {t('copy_1')} <a href="https://www.linkedin.com/in/genadev" className="hover:underline">GenaDeev</a> {t('copy_2')} <a href="https://genahost.vercel.app/" className="hover:underline">GenaHost</a>. | {t('copy_3')}
                         </span>
                         <div className="flex mt-4 sm:justify-center sm:mt-0">
                             <a title={t('icon_sr_twitch')} href="https://www.twitch.tv/mapsblack/" className="hover:text-gray-500 text-gray-900 dark:text-white dark:hover:text-gray-500">
@@ -87,6 +97,6 @@ export default async function Footer({ locale }) {
                     </div>
                 </div>
             </footer>
-        </TranslationsProvider>
+        </TranslationsProvider >
     )
 }
