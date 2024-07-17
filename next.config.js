@@ -33,6 +33,10 @@ module.exports = {
             key: 'X-Powered-By',
             value: ''
           },
+          {
+            key: 'Server',
+            value: ''
+          }
         ],
       },
     ]
