@@ -42,10 +42,10 @@ export default function ClientHeader() {
     }, [currentLocale]); // Update lang whenever currentLocale changes
 
     const mapsLinkStyle = {
-        display: pathname === "/maps" ? 'none' : 'flex',
+        display: pathname === "/maps" || pathname === "/en/maps" ? 'none' : 'flex',
     };
     const contactLinkStyle = {
-        display: pathname === "/contact" ? 'none' : 'flex',
+        display: pathname === "/contact" || pathname === "/en/contact" ? 'none' : 'flex',
     };
 
     return (
