@@ -16,14 +16,7 @@ html {
   background: black;
 }
 
-.hero {
-  background: url("https://blackmaps.com.ar/image/bg-map-l.webp");
-}
-
 @media (prefers-color-scheme: dark) {
-  .hero {
-    background: url("https://blackmaps.com.ar/image/bg-map.webp");
-  }
 ::-moz-selection {
   color: black;
   background: white;

@@ -1,10 +1,15 @@
-  .container {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.125s ease-in-out, transform 0.125s ease-in-out;
-  }
-  
-  .animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.container {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.125s ease-in-out, transform 0.125s ease-in-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(-20px);
+  transition: opacity 0.125s ease-in-out, transform 0.125s ease-in-out;
+}
+
+.no-js .container {
+  opacity: 1;
+}

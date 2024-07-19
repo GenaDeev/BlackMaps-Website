@@ -81,7 +81,7 @@ export default async function Home({ params: { locale } }) {
                 }}
             />
 
-            <main className="pt-[60px] flex flex-col items-center justify-center w-full">
+            <main className="pt-[60px] flex flex-col items-center justify-center w-full bg-hero-light dark:bg-hero-dark">
                 <section className="hero flex items-center justify-center h-screen w-full">
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
