@@ -92,3 +92,19 @@ html {
 .flag-icon-en {
   background-image: url(https://blackmaps.com.ar/image/flags/en.svg);
 }
+
+.not-animated {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.125s ease-in-out, transform 0.125s ease-in-out;
+}
+
+.already-animated {
+  opacity: 1;
+  transform: translateY(-20px);
+  transition: opacity 0.125s ease-in-out, transform 0.125s ease-in-out;
+}
+
+.no-js .content {
+  opacity: 1;
+}

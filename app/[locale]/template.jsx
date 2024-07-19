@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react';
-import styles from '../animation.module.css';
 
 export default function Template({ children }) {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -14,7 +13,6 @@ export default function Template({ children }) {
 
   useEffect(() => {
     document.body.classList.remove('no-js');
-
     const colorScheme = getCookie('forced-color-scheme');
     if (colorScheme) {
       if (colorScheme === 'Dark') {
@@ -32,7 +30,7 @@ export default function Template({ children }) {
   }, []);
 
   return (
-    <div className={`${styles.container} ${isAnimating ? styles.animate : ''}`}>
+    <div className={isAnimating ? "content already-animated" : "content not-animated"}>
       {children}
     </div>
   );
