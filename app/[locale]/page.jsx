@@ -4,6 +4,7 @@ import Script from "next/script";
 import TranslationsProvider from './components/TranslationsProvider';
 const i18nNamespaces = ['home'];
 import initTranslations from '../i18n';
+import HomeArticle from "./components/HomeArticle";
 
 export async function generateSchemas(t, locale) {
     const baseUrl = "https://blackmaps.com.ar"
@@ -107,67 +108,45 @@ export default async function Home({ params: { locale } }) {
 
                 <section id="about" className="flex flex-col gap-8 w-full items-start justify-center p-8">
                     <h2 className="text-7xl font-bold text-center mx-auto underline">{t('about_title')}</h2>
-                    <article className="flex flex-col md:flex-row w-full gap-8 bg-white dark:bg-[#3d3d3d] items-center justify-center rounded-xl p-12">
-                        <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
-                            <Image
-                                loading="lazy"
-                                src="/image/first-map.webp"
-                                className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
-                                alt={t('first_map_alternate')}
-                                width={400}
-                                height={200}
-                            />
-                        </div>
-                        <div itemScope itemType="https://schema.org/Question" className="flex flex-col gap-8 md:w-1/2">
-                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{t('first_question')}</h3>
-                            <div itemProp="suggestedAnswer" itemScope itemType="https://schema.org/Answer">
-                                <p itemProp="text" className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
-                                    {t('first_answer')}
-                                </p>
-                            </div>
-                        </div>
-                    </article>
 
-                    <article className="flex flex-col md:flex-row w-full gap-8 bg-white dark:bg-[#3d3d3d] items-center justify-center rounded-xl p-12">
-                        <div itemScope itemType="https://schema.org/Question" className="flex flex-col gap-8 md:w-1/2">
-                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{t('second_question')}</h3>
-                            <div itemProp="suggestedAnswer" itemScope itemType="https://schema.org/Answer">
-                                <p itemProp="text" className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
-                                {t('second_answer')}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
-                            <Image
-                                loading="lazy"
-                                src="/image/agus-p1.webp"
-                                className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
-                                alt={t('agus_image_alternate')}
-                                width={400}
-                                height={200}
-                            />
-                        </div>
-                    </article>
-                    <article className="flex flex-col md:flex-row w-full gap-8 bg-white dark:bg-[#3d3d3d] items-center justify-center rounded-xl p-12">
-                        <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
-                            <Image
-                                loading="lazy"
-                                src="/image/map-example-1.webp"
-                                className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
-                                alt="Mapa de Black Maps llamado: Club de ESTADOS UNIDOS 🇺🇸 más buscado en Google por país (desde 2004)"
-                                width={400}
-                                height={200}
-                            />
-                        </div>
-                        <div itemScope itemType="https://schema.org/Question" className="flex flex-col gap-8 md:w-1/2">
-                            <h3 itemProp="name" className="text-[#2d2d2d] dark:text-[#eee] font-bold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl">{t('third_question')}</h3>
-                            <div itemProp="suggestedAnswer" itemScope itemType="https://schema.org/Answer">
-                                <p itemProp="text" className="text-[20px] max-w-[600px] text-[#3d3d3d] dark:text-gray-400">
-                                {t('third_answer')}
-                                </p>
-                            </div>
-                        </div>
-                    </article>
+                    <HomeArticle
+                        title={t('first_question')}
+                        image={
+                            {
+                                source: "/image/first-map.webp",
+                                alternate: t('first_map_alternate')
+                            }
+                        }
+                        alignement="right"
+                    >
+                        {t('first_answer')}
+                    </HomeArticle>
+
+                    <HomeArticle
+                        title={t('second_question')}
+                        image={
+                            {
+                                source: "/image/agus-p1.webp",
+                                alternate: t('agus_image_alternate')
+                            }
+                        }
+                        alignement="left"
+                    >
+                        {t('second_answer')}
+                    </HomeArticle>
+                    
+                    <HomeArticle 
+                        title={t('third_question')}
+                        image={
+                            {
+                                source: "/image/map-example-1.webp",
+                                alternate: "Mapa de Black Maps llamado: Club de ESTADOS UNIDOS 🇺🇸 más buscado en Google por país (desde 2004)"
+                            }
+                        }
+                        alignement="right"
+                    >
+                        {t('third_answer')}
+                    </HomeArticle>
                     <p className="hidden seo-declaration-title">{t('meta_title')}</p>
                 </section>
             </main >
