@@ -36,6 +36,10 @@ module.exports = {
           {
             key: 'Server',
             value: ''
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' https://trustedscripts.example.com; style-src 'self' https://trustedstyles.example.com; img-src 'self' https://pbs.twimg.com; connect-src 'self'; font-src 'self'; frame-src 'self'"
           }
         ],
       },
@@ -65,6 +69,10 @@ module.exports = {
           {
             key: 'Server',
             value: ''
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' https://trustedscripts.example.com; style-src 'self' https://trustedstyles.example.com; img-src 'self' https://pbs.twimg.com; connect-src 'self'; font-src 'self'; frame-src 'self'"
           }
         ],
       }
