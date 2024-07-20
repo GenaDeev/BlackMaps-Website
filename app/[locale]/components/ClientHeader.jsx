@@ -46,6 +46,7 @@ export default function ClientHeader() {
             localStorage.removeItem("forced-color-scheme");
         }
         document.body.classList.remove('dark');
+        document.body.classList.add('light');
         setColorScheme("light");
     } else {
         if (originalColorScheme !== "Dark") {
@@ -53,6 +54,7 @@ export default function ClientHeader() {
         } else {
             localStorage.removeItem("forced-color-scheme");
         }
+        document.body.classList.remove('light');
         document.body.classList.add('dark');
         setColorScheme("dark");
     }
@@ -90,7 +92,15 @@ export default function ClientHeader() {
         <div className="flex gap-3">
             <button
                 onClick={handleSchemeChange}
-                className='gap-2 w-12 h-12 flex items-center justify-center hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold'>
+                className={"w-12 h-12 flex items-center justify-center hover:scale-105 active:scale-95 transition rounded-xl p-2 "
+                    +
+                    (
+                    colorScheme === "dark" ?
+                    'text-yellow-400 active:bg-[#2d2d2d] bg-[#4d4d4d]'
+                    :
+                    'text-[#4d4d4d] active:bg-yellow-500 bg-yellow-400'
+                    )
+                    }>
                 {
                     colorScheme === "light" ?
                         <svg

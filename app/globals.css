@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.dark, .light {
+  transition: all .5s ease-in-out;
+}
+
 ::-moz-selection {
   color: white;
   background: black;

@@ -7,19 +7,30 @@ export default function Template({ children }) {
   const getLocalStorageItem = (name) => {
     return localStorage.getItem(name);
   }
+
+  const setScheme = (scheme) => {
+    if (scheme === "light") {
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
+    }
+    else {
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+    }
+  }
   
   useEffect(() => {
     document.body.classList.remove('no-js');
     const colorScheme = getLocalStorageItem('forced-color-scheme');
     if (colorScheme) {
       if (colorScheme === 'Dark') {
-        document.body.classList.add('dark');
+        setScheme("dark");
       } else if (colorScheme === 'Light') {
-        document.body.classList.remove('dark');
+        setScheme("light");
       }
     } else {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        setScheme("dark");
       }
     }
   
