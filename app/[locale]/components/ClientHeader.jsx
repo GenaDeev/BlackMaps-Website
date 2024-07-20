@@ -88,11 +88,17 @@ export default function ClientHeader() {
         display: pathname === "/contact" || pathname === "/en/contact" ? 'none' : 'flex',
     };
 
+    const schemeButtonTitle = {
+        en: "Change color scheme to " + (colorScheme === "dark" ? "light" : "dark"),
+        es: "Cambiar esquema de color a " + (colorScheme === "dark" ? "claro" : "oscuro"),
+    }
+
     return (
         <nav>
             <ul className='flex gap-3'>
                 <li>
                     <button
+                        title={lang === "es" ? schemeButtonTitle.es : schemeButtonTitle.en}
                         onClick={handleSchemeChange}
                         className={"w-12 h-12 flex items-center justify-center sm:hover:scale-105 active:scale-95 transition rounded-xl p-2 "
                             +
