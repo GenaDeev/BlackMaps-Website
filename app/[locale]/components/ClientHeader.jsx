@@ -39,27 +39,25 @@ export default function ClientHeader() {
     };
 
     const handleSchemeChange = () => {
-        if (colorScheme === "dark") {
-            if (originalColorScheme !== "Light") {
-                document.cookie = "forced-color-scheme=Light";
-            }
-            else {
-                document.cookie = "forced-color-scheme=;Path=/;Expires=Thu, 01 Jan 1970 00:00:00 GMT;";
-            }
-            document.body.classList.remove('dark');
-            setColorScheme("light");
+    if (colorScheme === "dark") {
+        if (originalColorScheme !== "Light") {
+            localStorage.setItem("forced-color-scheme", "Light");
+        } else {
+            localStorage.removeItem("forced-color-scheme");
         }
-        else {
-            if (originalColorScheme !== "Dark") {
-                document.cookie = "forced-color-scheme=Dark";
-            }
-            else {
-                document.cookie = "forced-color-scheme=;Path=/;Expires=Thu, 01 Jan 1970 00:00:00 GMT;";
-            }
-            document.body.classList.add('dark')
-            setColorScheme("dark")
+        document.body.classList.remove('dark');
+        setColorScheme("light");
+    } else {
+        if (originalColorScheme !== "Dark") {
+            localStorage.setItem("forced-color-scheme", "Dark");
+        } else {
+            localStorage.removeItem("forced-color-scheme");
         }
+        document.body.classList.add('dark');
+        setColorScheme("dark");
     }
+}
+
 
     useEffect(() => {
         setLang(currentLocale);

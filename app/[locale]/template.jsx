@@ -4,16 +4,13 @@ import { useEffect, useState } from 'react';
 export default function Template({ children }) {
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const getCookie = (name) => {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-    return null;
+  const getLocalStorageItem = (name) => {
+    return localStorage.getItem(name);
   }
-
+  
   useEffect(() => {
     document.body.classList.remove('no-js');
-    const colorScheme = getCookie('forced-color-scheme');
+    const colorScheme = getLocalStorageItem('forced-color-scheme');
     if (colorScheme) {
       if (colorScheme === 'Dark') {
         document.body.classList.add('dark');
@@ -25,9 +22,10 @@ export default function Template({ children }) {
         document.body.classList.add('dark');
       }
     }
-
+  
     setIsAnimating(true);
   }, []);
+  
 
   return (
     <div className={isAnimating ? "content already-animated" : "content not-animated"}>
