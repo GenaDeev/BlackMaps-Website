@@ -72,7 +72,7 @@ module.exports = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://pbs.twimg.com; connect-src 'self'; font-src 'self'; frame-src 'self'"
+            value: "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://pbs.twimg.com data:; connect-src 'self'; font-src 'self'; frame-src 'self'"
           }
         ],
       }
