@@ -33,7 +33,7 @@ export default function ContactForm() {
         e.preventDefault();
 
         try {
-            const response = await fetch('/api', {
+            const response = await fetch('/api/mail/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

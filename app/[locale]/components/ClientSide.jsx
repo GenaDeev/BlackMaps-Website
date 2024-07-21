@@ -22,7 +22,7 @@ export default function ClientSide() {
       
     useEffect(() => {
         setLoading(true);
-        fetch("https://filehost.comidolar.com.ar:6060/api/blackmaps/mapgallery")
+        fetch("/api/maps")
             .then(response => response.json())
             .then(data => {
                 setMaps(data);
