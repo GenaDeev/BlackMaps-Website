@@ -18,7 +18,7 @@ export default async function Footer({ locale }) {
                     <div className="md:flex md:justify-between">
                         <div className="mb-6 md:mb-0 flex gap-3 items-center">
                             <Link title="Volver al Inicio" href="/" className="hover:scale-95 transition duration-200 flex items-center">
-                                <Logo className="dark:invert logo" width="128px" height="128px" />
+                                <Logo className="dark:invert logo" width={128} height={128} />
                             </Link>
                             <Link title="GenaDeev" href="https://www.linkedin.com/in/genadev" className="hover:scale-95 transition duration-200 ">
                                 <Image
