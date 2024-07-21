@@ -63,7 +63,7 @@ export default function RootLayout({ children, params: { locale } }) {
         <meta name="copyright" content="BlackMaps™ 2024" />
         <meta name="keywords" content="blackmaps, mapas, twitter, web, negro" />
       </head>
-      <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white no-js light">
+      <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white no-js dark">
         <Header locale={locale}/>
         {children}
         <Analytics/>

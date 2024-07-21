@@ -29,8 +29,8 @@ export default function Template({ children }) {
         setScheme("light");
       }
     } else {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setScheme("dark");
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        setScheme("light");
       }
     }
   
