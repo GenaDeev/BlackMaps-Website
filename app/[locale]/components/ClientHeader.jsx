@@ -82,10 +82,10 @@ export default function ClientHeader() {
 
 
     const mapsLinkStyle = {
-        display: pathname === "/maps" || pathname === "/en/maps" ? 'none' : 'flex',
+        display: pathname === "/maps" || pathname === "/en/maps" && 'none',
     };
     const contactLinkStyle = {
-        display: pathname === "/contact" || pathname === "/en/contact" ? 'none' : 'flex',
+        display: pathname === "/contact" || pathname === "/en/contact" && 'none',
     };
 
     const schemeButtonTitle = {
@@ -170,7 +170,7 @@ export default function ClientHeader() {
                     </div>
                 </li>
                 <li style={mapsLinkStyle}>
-                    <Link title={lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/maps">
+                    <Link title={lang === "en" ? "Maps" : lang === "es" ? "Mapas" : ''} className="gap-2 flex w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/maps">
                         <svg
                             className="dark:text-white text-[#1d1d1d] w-[32px] h-[32px] sm:w-[24px]"
                             xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@ export default function ClientHeader() {
                     </Link>
                 </li>
                 <li style={contactLinkStyle}>
-                    <Link title={lang === "en" ? "Contact" : lang === "es" ? "Contacto" : ''} className="gap-2 w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/contact">
+                    <Link title={lang === "en" ? "Contact" : lang === "es" ? "Contacto" : ''} className="gap-2 flex w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold" href="/contact">
                         <svg style={{ fill: "currentColor", transform: "", msfilter: "" }} className="dark:text-white text-[#1d1d1d] w-[32px] h-[32px] sm:w-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H6c-1.103 0-2 .897-2 2v5h2V8l6.4 4.8a1.001 1.001 0 0 0 1.2 0L20 8v9h-8v2h8c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-7 6.75L6.666 6h12.668L13 10.75z"></path><path d="M2 12h7v2H2zm2 3h6v2H4zm3 3h4v2H7z"></path></svg>
                         <p className="hidden sm:block">{lang === "en" ? "Contact" : lang === "es" ? "Contacto" : ''}</p>
                     </Link>
