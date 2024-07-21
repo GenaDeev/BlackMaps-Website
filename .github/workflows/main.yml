@@ -3,6 +3,8 @@ name: Build and Deploy
 env:
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    I18NEXUS_API_KEY: ${{ secrets.I18NEXUS_API_KEY }}
+    SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
 
 on:
     workflow_dispatch: 
@@ -23,7 +25,7 @@ jobs:
             - name: Install Project Dependencies
               run: npm install
 
-            - name: Build Astro Project
+            - name: Build NextJS v14.2.5 Project
               run: npm run build
 
             - name: Build Project Artifacts
