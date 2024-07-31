@@ -66,7 +66,6 @@ export default function RootLayout({ children, params: { locale } }) {
       <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white no-js dark">
         <Header locale={locale}/>
         {children}
-        <Analytics/>
         <SpeedInsights/>
         <Footer locale={locale}/>
         </body>
