@@ -6,7 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.dark, .light {
+.dark,
+.light {
   transition: all .5s ease-in-out;
 }
 
@@ -21,17 +22,18 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-::-moz-selection {
-  color: black;
-  background: white;
+  ::-moz-selection {
+    color: black;
+    background: white;
+  }
+
+  ::selection {
+    color: black;
+    background: white;
+  }
+
 }
 
-::selection {
-  color: black;
-  background: white;
-}
-
-}
 .map-card {
   width: 350px !important;
   height: 224px !important;
@@ -78,7 +80,8 @@ html {
   height: 224px;
 }
 
-.flag-icon, .flag-icon-background {
+.flag-icon,
+.flag-icon-background {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
@@ -90,6 +93,7 @@ html {
 .flag-icon-es {
   background-image: url(https://blackmaps.com.ar/image/flags/es.svg)
 }
+
 .flag-icon-en {
   background-image: url(https://blackmaps.com.ar/image/flags/en.svg);
 }
@@ -108,4 +112,21 @@ html {
 
 .no-js .content {
   opacity: 1;
+}
+
+.spinner_z9k8 {
+  width: 24px;
+  height: 24px;
+}
+
+.spinner_z9k8 path {
+  transform-origin: center;
+  animation: spinner_StKS 1s infinite linear;
+  fill: white;
+}
+
+@keyframes spinner_StKS {
+  100% {
+    transform: rotate(360deg)
+  }
 }
