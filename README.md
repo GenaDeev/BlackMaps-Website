@@ -111,28 +111,28 @@ Using APP Router
 └─ 📖 <a href="https://github.com/GenaDeev/BlackMaps-Website/blob/main/README.md">README.md</a>
 </pre>
 ---
-<div style="display:flex; align-items: center; justify-content: space-between;">
-    <img alt="Logo de GenaDeev" src="public/image/app-icon-512.webp" width="256" style="scale: .6;" alt="BlackMaps Logo">
-    <div>
-    <div style="font-size: 24px"><div style="color:white; display:inline; font-weight: bold;">BlackMaps</div> by <div style="color:white; display:inline; font-weight: bold;">Agustin Sanchez</div> ©2024</div>
-    <div style="list-style: none;">
-        <div style="display:flex; align-items: center; gap: 4px;"><img src="public/image/x.webp"><a style="color:inherit;" href="https://x.com/maps_black"> Twitter</a></div>
-    </div>
-    </div>
-</div>
+
+[<img src="public/image/app-icon-512.webp" width="256"/>](public/image/app-icon-512.webp)
+
+<font size="6" color="#ccc">**BlackMaps** by **Agustin Sanchez** ©2024</font>
+
+Todos los derechos reservados
+
+ [![Twitter Logo](public/image/x.webp) Twitter](https://x.com/maps_black)
+
 
 ---
 
-<div style="display:flex; align-items: center; justify-content: space-between;">
-    <img alt="Logo de GenaDeev" src="public/image/genadev-v-nobg-2.webp">
-    <div>
-    <div style="font-size: 24px">Developed by <div style="color:white; display:inline; font-weight: bold;">GenaDeev</div> ©2024</div>
-    <div>
-        <div style="display:flex; align-items: center; gap: 4px;"><img src="public/image/github.webp"><a style="color:inherit;" href="https://github.com/GenaDeev"> GitHub</a></div>
-        <div style="display:flex; align-items: center; gap: 4px;"><img src="public/image/lnk.webp"><a style="color:inherit;" href="https://www.linkedin.com/in/genadev/"> LinkedIn</a></div>
-        <div style="display:flex; align-items: center; gap: 4px;"><img src="public/image/x.webp"><a style="color:inherit;" href="https://x.com/genaaaaj"> Twitter</a></div>
-    </ul>
-    </div>
+<img alt="Logo de GenaDeev" src="public/image/genadev-v-nobg-2.webp">
+
+<font size="6" color="#ccc">Developed by **GenaDeev** ©2024</font>
+
+[![Github Logo](public/image/github.webp) Github](https://github.com/GenaDeev)
+
+[![LinkedIn Logo](public/image/lnk.webp) LinkedIn](https://www.linkedin.com/in/genadev/)
+
+[![Twitter Logo](public/image/x.webp) Twitter](https://x.com/genaaaaj)
+
 </div>
 </div>
 
