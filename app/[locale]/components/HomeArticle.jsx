@@ -19,16 +19,16 @@ export default function HomeArticle({ title, image, children, alignement, locale
 
     const ImagePart = () => {
         return (
-            <div className="flex mt-4 w-full md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
+            <a href={image.source} className="flex w-full md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24 p-2 hover:-rotate-6 hover:scale-105 transition duration-300 filter hover:drop-shadow-custom-lg">
                 <Image
                     loading="lazy"
                     src={image.source}
-                    className="rounded-xl p-2 w-full hover:scale-105 transition duration-500 filter hover:drop-shadow-custom-lg"
+                    className="rounded-xl"
                     alt={image.alternate}
                     width={400}
                     height={200}
                 />
-            </div>
+            </a>
         )
     }
 

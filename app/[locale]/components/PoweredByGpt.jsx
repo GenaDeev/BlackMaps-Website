@@ -9,7 +9,7 @@ export default async function PoweredByGpt({ locale }) {
             namespaces={i18nNamespaces}
             locale={locale}
             resources={resources}>
-            <div className="flex gap-4 w-full h-auto py-3 md:py-0 md:w-[300px] md:h-[100px] bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-200 dark:hover:bg-neutral-300 text-neutral-200 dark:text-neutral-800 items-center rounded-xl px-4 hover:outline outline-4 hover:outline-neutral-400 dark:hover:outline-neutral-600 hover:-rotate-6 hover:scale-105 hover:shadow-xl hover:shadow-black dark:hover:shadow-white select-none transition-all duration-300">
+            <div className="flex gap-4 w-full h-auto py-3 md:py-0 md:w-[300px] md:h-[100px] bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-200 dark:hover:bg-neutral-300 text-neutral-200 dark:text-neutral-800 items-center rounded-xl px-4 hover:outline outline-4 hover:outline-neutral-400 dark:hover:outline-neutral-400 hover:-rotate-6 hover:scale-105 hover:shadow-xl hover:shadow-black dark:hover:shadow-white select-none transition-all duration-300">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 hover:text-yellow-400 transition-colors duration-200" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
