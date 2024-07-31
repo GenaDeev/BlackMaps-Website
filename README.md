@@ -1,6 +1,5 @@
 ![BlackMaps Banner](public/image/readme-banner.webp)
 # 🗺️ BlackMaps™ - Sitio en desarrollo
-<div style="font-family: Inter;">
 
 ## Descripción
 
@@ -132,8 +131,3 @@ Todos los derechos reservados
 [![LinkedIn Logo](public/image/lnk.webp) LinkedIn](https://www.linkedin.com/in/genadev/)
 
 [![Twitter Logo](public/image/x.webp) Twitter](https://x.com/genaaaaj)
-
-</div>
-</div>
-
----
