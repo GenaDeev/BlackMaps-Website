@@ -19,7 +19,7 @@ export default function HomeArticle({ title, image, children, alignement, locale
 
     const ImagePart = () => {
         return (
-            <div className="flex mt-4 md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
+            <div className="flex mt-4 w-full md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24">
                 <Image
                     loading="lazy"
                     src={image.source}
