@@ -117,6 +117,7 @@ export default async function Home({ params: { locale } }) {
                                 alternate: t('first_map_alternate')
                             }
                         }
+                        locale={locale}
                         alignement="right"
                     >
                         {t('first_answer')}
@@ -130,6 +131,7 @@ export default async function Home({ params: { locale } }) {
                                 alternate: t('agus_image_alternate')
                             }
                         }
+                        locale={locale}
                         alignement="left"
                     >
                         {t('second_answer')}
@@ -143,6 +145,7 @@ export default async function Home({ params: { locale } }) {
                                 alternate: "Mapa de Black Maps llamado: Club de ESTADOS UNIDOS 🇺🇸 más buscado en Google por país (desde 2004)"
                             }
                         }
+                        locale={locale}
                         alignement="right"
                     >
                         {t('third_answer')}

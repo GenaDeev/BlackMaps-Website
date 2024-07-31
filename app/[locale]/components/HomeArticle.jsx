@@ -1,6 +1,7 @@
 import Image from "next/image"
+import PoweredByGpt from "./PoweredByGpt"
 
-export default function HomeArticle({ title, image, children, alignement }) {
+export default function HomeArticle({ title, image, children, alignement, locale }) {
 
     const TextPart = () => {
         return (
@@ -11,6 +12,7 @@ export default function HomeArticle({ title, image, children, alignement }) {
                         {children}
                     </p>
                 </div>
+                <PoweredByGpt locale={locale} />
             </div>
         )
     }
