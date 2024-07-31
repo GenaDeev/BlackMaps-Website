@@ -49,7 +49,7 @@ html {
   }
 }
 
-.loading {
+body.light .loading {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -61,18 +61,16 @@ html {
   position: relative;
 }
 
-@media (prefers-color-scheme:dark) {
-  .loading {
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: placeHolderShimmer;
-    animation-timing-function: linear;
-    background-color: #f6f7f8;
-    background: linear-gradient(to right, #2d2d2d 8%, #1d1d1d 18%, #2d2d2d 33%);
-    background-size: 800px 104px;
-    position: relative;
-  }
+body.dark .loading {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #2d2d2d 8%, #1d1d1d 18%, #2d2d2d 33%);
+  background-size: 800px 104px;
+  position: relative;
 }
 
 .image-loading {
