@@ -106,7 +106,7 @@ export default async function Home({ params: { locale } }) {
                     </div>
                 </section>
 
-                <section id="about" className="flex flex-col gap-8 w-full items-start justify-center p-8">
+                <section id="about" className="flex flex-col gap-8 w-full items-start md:items-center justify-center p-8">
                     <h2 className="text-7xl font-bold text-center mx-auto underline">{t('about_title')}</h2>
 
                     <HomeArticle

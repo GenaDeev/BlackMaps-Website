@@ -19,21 +19,21 @@ export default function HomeArticle({ title, image, children, alignement, locale
 
     const ImagePart = () => {
         return (
-            <a href={image.source} className="flex w-full md:w-1/2 items-center justify-center md:justify-between flex-wrap gap-24 p-2 hover:-rotate-6 hover:scale-105 transition duration-300 filter hover:drop-shadow-custom-lg">
-                <Image
-                    loading="lazy"
-                    src={image.source}
-                    className="rounded-xl md:w-3/4"
-                    alt={image.alternate}
-                    width={400}
-                    height={200}
-                />
-            </a>
+                <a href={image.source} className="flex h-full items-center justify-center md:justify-between flex-wrap gap-24 hover:-rotate-6 hover:scale-105 transition duration-300 filter hover:drop-shadow-custom-lg rounded-xl hover:outline outline-4 hover:outline-neutral-400 dark:hover:outline-neutral-400">
+                    <Image
+                        loading="lazy"
+                        src={image.source}
+                        className="rounded-xl"
+                        alt={image.alternate}
+                        width={400}
+                        height={200}
+                    />
+                </a>
         )
     }
 
     return (
-        <article className="flex flex-col md:flex-row w-full gap-8 shadow-xl shadow-black/50 dark:shadow-white/50 bg-white dark:bg-[#3d3d3d] items-center justify-center rounded-xl p-12">
+        <article className="flex flex-col md:flex-row w-full md:w-[70%] gap-8 shadow-xl shadow-black/50 dark:shadow-white/50 bg-white dark:bg-[#3d3d3d] items-center justify-center md:justify-between rounded-xl p-12">
             {
                 alignement === "right" ?
                     <>
