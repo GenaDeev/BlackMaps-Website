@@ -1,4 +1,4 @@
-![BlackMaps Logo](https://blackmaps.com.ar/image/readme-banner.webp)
+![BlackMaps Banner](public/image/readme-banner.webp)
 # BlackMaps License
 ---
 ## Code License
