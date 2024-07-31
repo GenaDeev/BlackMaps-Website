@@ -23,7 +23,7 @@ export default function HomeArticle({ title, image, children, alignement, locale
                 <Image
                     loading="lazy"
                     src={image.source}
-                    className="rounded-xl"
+                    className="rounded-xl md:w-3/4"
                     alt={image.alternate}
                     width={400}
                     height={200}
