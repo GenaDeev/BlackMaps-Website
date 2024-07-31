@@ -55,7 +55,7 @@ export default async function Footer({ locale }) {
                                         <a href="https://github.com/GenaDeev/BlackMaps-Website" className="hover:underline ">{t('dev_repo')}</a>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/GenaAaaj/BlackMaps-Website/blob/main/LICENSE" className="hover:underline">{t('dev_license')}</a>
+                                        <a href="https://github.com/GenaAaaj/BlackMaps-Website/blob/main/LICENSE.md" className="hover:underline">{t('dev_license')}</a>
                                     </li>
                                     <li>
                                         <a href="https://www.linkedin.com/in/genadev" className="hover:underline">@GenaDeev</a>
