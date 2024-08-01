@@ -14,6 +14,9 @@ module.exports = {
         'hero-light': "url('/image/bg-map-l.webp')",
         'hero-dark': "url('/image/bg-map.webp')",
       },
+      fontFamily: {
+        "inter": ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
+      }
     },
   },
   darkMode: 'selector',
