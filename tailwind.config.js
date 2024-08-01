@@ -13,9 +13,6 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         'hero-light': "url('/image/bg-map-l.webp')",
         'hero-dark': "url('/image/bg-map.webp')",
-      },
-      fontFamily: {
-        "inter": ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
       }
     },
   },

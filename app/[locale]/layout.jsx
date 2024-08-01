@@ -3,10 +3,13 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import i18nConfig from '@/i18nConfig';
+import { Inter } from 'next/font/google'
 
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));
 }
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children, params: { locale } }) {
   return (
@@ -62,7 +65,7 @@ export default function RootLayout({ children, params: { locale } }) {
         <meta name="copyright" content="BlackMaps™ 2024" />
         <meta name="keywords" content="blackmaps, mapas, twitter, web, negro" />
       </head>
-      <body className="text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white no-js dark font-inter">
+      <body className={"text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white no-js dark " + inter.className}>
         <Header locale={locale}/>
         {children}
         <SpeedInsights/>
