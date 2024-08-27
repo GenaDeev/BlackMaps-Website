@@ -78,7 +78,7 @@ export default function ClientHeader() {
         else {
             setOriginalColorScheme("Light")
         }
-    })
+    },[])
 
 
     const mapsLinkStyle = {
