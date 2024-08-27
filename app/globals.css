@@ -11,27 +11,24 @@ html {
   transition: all .5s ease-in-out;
 }
 
-::-moz-selection {
+.light ::-moz-selection {
   color: white;
   background: black;
 }
 
-::selection {
+.light ::selection {
   color: white;
   background: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  ::-moz-selection {
-    color: black;
-    background: white;
-  }
+.dark ::-moz-selection {
+  color: black;
+  background: white;
+}
 
-  ::selection {
-    color: black;
-    background: white;
-  }
-
+.dark ::selection {
+  color: black;
+  background: white;
 }
 
 .map-card {
