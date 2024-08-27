@@ -42,7 +42,7 @@ export default function RootLayout({ children, params: { locale } }) {
           sizes="152x152"
           href="https://blackmaps.com.ar/image/at-152.png"
         />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
