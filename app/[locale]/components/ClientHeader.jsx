@@ -156,28 +156,28 @@ export default function ClientHeader() {
                 </li>
                 <li style={mapsLinkStyle}>
                     <Link href={lang === "en" ? "/en/maps" : "/maps"} title={lang === "en" ? "Map Gallery" : "Galeria de Mapas"} aria-label={lang === "en" ? "Map Gallery" : "Galeria de Mapas"} className="gap-2 flex w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="w-5 h-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3">
                             <polygon points="3 6 9 3 15 6 21 3 21 17 15 21 9 18 3 21 3 6"></polygon>
                             <line x1="9" x2="9" y1="3" y2="18"></line>
                             <line x1="15" x2="15" y1="6" y2="21"></line>
                             <line x1="3" x2="21" y1="6" y2="3"></line>
                         </svg>
-                        {lang === "en" ? "Maps" : "Mapas"}
+                        <span className='hidden sm:inline'>{lang === "en" ? "Maps" : "Mapas"}</span>
                     </Link>
                 </li>
                 <li style={contactLinkStyle}>
                     <Link href={lang === "en" ? "/en/contact" : "/contact"} title={lang === "en" ? "Contact form" : "Formulario de contacto"} aria-label={lang === "en" ? "Contact form" : "Formulario de contacto"} className="gap-2 flex w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="w-5 h-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3">
                             <path d="M22 6c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V6z"></path>
                             <path d="m22 6-10 7L2 6"></path>
                         </svg>
-                        {lang === "en" ? "Contact" : "Contacto"}
+                        <span className='hidden sm:inline'>{lang === "en" ? "Contact" : "Contacto"}</span>
                     </Link>
                 </li>
                 <li>
                     <Link href="https://x.com/maps_black" title={lang === "en" ? "Twitter account" : "Cuenta de Twitter"} aria-label={lang === "en" ? "Twitter account" : "Cuenta de Twitter"} className="gap-2 flex w-12 h-12 sm:w-auto items-center justify-center sm:hover:scale-105 active:scale-95 transition dark:text-white text-[#1d1d1d] active:bg-[#bbb] dark:active:bg-[#2d2d2d] dark:bg-[#4d4d4d] bg-[#aaa] rounded-xl p-2 font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 1200 1227"><path fill="currentColor" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z" /></svg>
-                        Twitter
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 1200 1227"><path fill="currentColor" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z" /></svg>
+                        <span className='hidden sm:inline'>Twitter</span>
                     </Link>
                 </li>
             </ul>
