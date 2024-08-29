@@ -6,7 +6,8 @@
     "dev": "i18nexus pull && next dev",
     "build": "i18nexus pull && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync": "bun install && npm install --package-lock-only && yarn install --mode update-lockfile"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.3",
