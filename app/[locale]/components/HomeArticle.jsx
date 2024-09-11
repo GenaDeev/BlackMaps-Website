@@ -1,7 +1,7 @@
 import Image from "next/image"
 import PoweredByGpt from "./PoweredByGpt"
 
-export default function HomeArticle({ title, image, children, alignement, locale }) {
+export default function HomeArticle({ title, image, children, alignement, locale, aos }) {
 
     const TextPart = () => {
         return (
@@ -33,7 +33,7 @@ export default function HomeArticle({ title, image, children, alignement, locale
     }
 
     return (
-        <article className="flex flex-col md:flex-row w-full md:w-[70%] gap-8 shadow-xl shadow-black/50 dark:shadow-white/50 bg-white dark:bg-[#3d3d3d] items-center justify-center md:justify-between rounded-xl p-12">
+        <article data-aos={aos} className="flex flex-col md:flex-row w-full md:w-[70%] gap-8 shadow-xl shadow-black/50 dark:shadow-white/50 bg-white dark:bg-[#3d3d3d] items-center justify-center md:justify-between rounded-xl p-12">
             {
                 alignement === "right" ?
                     <>

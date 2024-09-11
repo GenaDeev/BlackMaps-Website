@@ -5,6 +5,7 @@ import TranslationsProvider from './components/TranslationsProvider';
 const i18nNamespaces = ['home'];
 import initTranslations from '../i18n';
 import HomeArticle from "./components/HomeArticle";
+import AOS from 'aos';
 
 export async function generateSchemas(t, locale) {
     const baseUrl = "https://blackmaps.com.ar"
@@ -106,47 +107,44 @@ export default async function Home({ params: { locale } }) {
                     </div>
                 </section>
 
-                <section id="about" className="flex flex-col gap-8 w-full items-start md:items-center justify-center p-8">
-                    <h2 className="text-7xl font-bold text-center mx-auto underline">{t('about_title')}</h2>
+                <section id="about" className="flex flex-col gap-12 w-full items-start md:items-center justify-center p-8">
+                    <h2 className="text-7xl font-bold text-center mx-auto underline" data-aos="fade-up">{t('about_title')}</h2>
 
                     <HomeArticle
                         title={t('first_question')}
-                        image={
-                            {
-                                source: "/image/first-map.webp",
-                                alternate: t('first_map_alternate')
-                            }
-                        }
+                        image={{
+                            source: "/image/first-map.webp",
+                            alternate: t('first_map_alternate')
+                        }}
                         locale={locale}
                         alignement="right"
+                        aos="fade-up"
                     >
                         {t('first_answer')}
                     </HomeArticle>
 
                     <HomeArticle
                         title={t('second_question')}
-                        image={
-                            {
-                                source: "/image/agus-p1.webp",
-                                alternate: t('agus_image_alternate')
-                            }
-                        }
+                        image={{
+                            source: "/image/agus-p1.webp",
+                            alternate: t('agus_image_alternate')
+                        }}
                         locale={locale}
                         alignement="left"
+                        aos="fade-up"
                     >
                         {t('second_answer')}
                     </HomeArticle>
-                    
-                    <HomeArticle 
+
+                    <HomeArticle
                         title={t('third_question')}
-                        image={
-                            {
-                                source: "/image/map-example-1.webp",
-                                alternate: "Mapa de Black Maps llamado: Club de ESTADOS UNIDOS 🇺🇸 más buscado en Google por país (desde 2004)"
-                            }
-                        }
+                        image={{
+                            source: "/image/map-example-1.webp",
+                            alternate: "Mapa de Black Maps llamado: Club de ESTADOS UNIDOS 🇺🇸 más buscado en Google por país (desde 2004)"
+                        }}
                         locale={locale}
                         alignement="right"
+                        aos="fade-up"
                     >
                         {t('third_answer')}
                     </HomeArticle>

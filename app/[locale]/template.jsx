@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Template({ children }) {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -20,6 +22,7 @@ export default function Template({ children }) {
   }
   
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     document.body.classList.remove('no-js');
     const colorScheme = getLocalStorageItem('forced-color-scheme');
     if (colorScheme) {
