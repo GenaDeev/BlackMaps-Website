@@ -4,6 +4,7 @@ import Header from './components/Header';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import i18nConfig from '@/i18nConfig';
 import { Inter } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export function generateStaticParams() {
   return i18nConfig.locales.map(locale => ({ locale }));
@@ -65,6 +66,7 @@ export default function RootLayout({ children, params: { locale } }) {
         <meta name="copyright" content="BlackMaps™ 2024" />
         <meta name="keywords" content="blackmaps, mapas, twitter, web, negro" />
       </head>
+      <GoogleTagManager gtmId="GTM-T73WQFHD"/>
       <body className={"text-[#1d1d1d] bg-[#eee] dark:bg-[#1d1d1d] dark:text-white no-js dark " + inter.className}>
         <Header locale={locale}/>
         {children}
