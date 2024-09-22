@@ -79,7 +79,7 @@ export default async function MapsPage({ params: { locale } }) {
                     <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl">
                         {t('main_subtitle')}
                     </h2>
-                    <Error type="warning" message={t('error_message')} />
+                    <Error type="minor" message={t('error_message')} />
                     <ClientSide/>
                 </div>
             </main>
