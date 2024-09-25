@@ -1,5 +1,3 @@
 User-agent: *
-Disallow: /cdn-cgi/
-Disallow: /_vercel/
-Disallow: /_next/
+Allow: *
 Sitemap: https://comidolar.com.ar/sitemap.xml
