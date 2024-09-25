@@ -59,6 +59,8 @@ export async function generateMetadata({ params: { locale } }) {
 export default async function MapsPage({ params: { locale } }) {
     const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
+    const schemaJSON = JSON.stringify(jsonLd);
+
     return (
         <TranslationsProvider
             namespaces={i18nNamespaces}
@@ -68,7 +70,7 @@ export default async function MapsPage({ params: { locale } }) {
                 id="col-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: jsonLd,
+                    __html: schemaJSON,
                 }}
             />
             <main className="flex flex-col">
