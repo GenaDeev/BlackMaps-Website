@@ -68,7 +68,7 @@ export default async function MapsPage({ params: { locale } }) {
                 id="col-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(jsonLd),
+                    __html: jsonLd,
                 }}
             />
             <main className="flex flex-col">
