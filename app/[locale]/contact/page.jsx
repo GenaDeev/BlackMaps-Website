@@ -61,7 +61,7 @@ export default async function ContactPage({ params: { locale } }) {
                 id="ctc-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schemaJSON),
+                    __html: schemaJSON,
                 }}
             />
             <main className="bg-white dark:bg-neutral-900 pt-20">

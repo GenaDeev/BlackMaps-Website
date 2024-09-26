@@ -76,12 +76,12 @@ export default async function Home({ params: { locale } }) {
             locale={locale}
             resources={resources}>
             <Script
-                id="org-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(schemaJSON),
-                }}
-            />
+    id="org-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+        __html: schemaJSON,
+    }}
+/>
 
             <main className="flex flex-col items-center justify-center w-full">
                 <section className="min-h-[calc(100svh+20px)] hero flex items-center justify-center w-full bg-hero-light dark:bg-hero-dark">
