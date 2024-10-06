@@ -2,7 +2,7 @@ export default function ErrorMessage(props) {
     const { type, message } = props;
 
     return (
-        <div className={type === "warning" ? "bg-orange-600/30 p-8 flex flex-col sm:flex-row items-center gap-6 rounded-xl m-8" : type === "error" ? "bg-red-600/30 p-8 flex flex-col sm:flex-row items-center gap-6 rounded-xl m-8": type === "minor" && "bg-blue-600/30 p-8 flex flex-col sm:flex-row items-center gap-6 rounded-xl m-8"}>
+        <div className={type === "warning" ? "bg-orange-600/30 p-8 flex flex-col sm:flex-row items-center gap-6 rounded-xl m-8" : type === "error" ? "bg-red-600/30 p-8 flex flex-col sm:flex-row items-center gap-6 rounded-xl m-8 max-w-[1114px]": type === "minor" && "bg-blue-600/30 p-8 flex flex-col sm:flex-row items-center gap-6 rounded-xl m-8 max-w-[1114px]"}>
             <div className="error-icon">
             {
                 type === "warning" ?

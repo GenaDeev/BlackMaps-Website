@@ -1,6 +1,8 @@
 import Image from "next/image";
+import CategoryIcon from "./CategoryIcon";
+
 export default function MapCard(props) {
-    const { title, map, tweet, mapid, date, likes, mapsm, locale } = props;
+    const { title, map, tweet, mapid, date, likes, mapsm, locale, category } = props;
 
     const translations = {
         es: {
@@ -9,7 +11,8 @@ export default function MapCard(props) {
             fromTwitter: "de",
             uploadedBy: "Subido por",
             goToTweet: "Ir al tweet",
-            mapNumber: `Este es el mapa numero ${mapid} de Black Maps`
+            mapNumber: `Este es el mapa numero ${mapid} de Black Maps`,
+            nonCategorized: "Sin categorizar aún"
         },
         en: {
             fullScreenTitle: "Full screen",
@@ -17,15 +20,32 @@ export default function MapCard(props) {
             fromTwitter: "from",
             uploadedBy: "Uploaded by",
             goToTweet: "Go to tweet",
-            mapNumber: `This is map number ${mapid} from Black Maps`
+            mapNumber: `This is map number ${mapid} from Black Maps`,
+            nonCategorized: "Not yet categorized"
         }
     };
 
+    const getCategoryNumber = (category) => {
+        switch (category) {
+            case "Naturaleza": return 0;
+            case "Cultura": return 1;
+            case "Economia": return 2;
+            case "Social": return 3;
+            case "Educacion": return 4;
+            case "Salud": return 5;
+            case "Tecnologia": return 6;
+            case "Politica": return 7;
+            case "Musica": return 8;
+            case "Deporte": return 9;
+            case "Otros": return 10;
+            default: return undefined;
+        }
+    }
+    
     const t = translations[locale] || translations.es;
-
     return (
-        <div
-            className="h-[470px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-neutral-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-neutral-700"
+        <article data-tweet-id={mapid}
+            className="h-[500px] w-[350px] max-w-sm flex flex-col justify-between bg-white border border-neutral-200 rounded-lg shadow-xl dark:bg-[#090909] dark:border-neutral-700"
         >
             <a href={map}>
                 <button title={t.fullScreenTitle} className="transition duration-200 absolute p-2 dark:hover:bg-neutral-600/80 bg-neutral-200/50 hover:bg-white/80 dark:bg-black/80 rounded-full z-40 m-2">
@@ -61,6 +81,10 @@ export default function MapCard(props) {
                         >
                             {title}
                         </h5>
+                        <span className="mb-2 flex gap-2 items-center">
+                            <CategoryIcon category={getCategoryNumber(category)} size={24}/>
+                            {category ? category : t.nonCategorized}
+                        </span>
                     </a>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                         {t.fromTwitter} <a href={tweet} className="font-bold dark:text-[#eee] text-[#3d3d3d]">Twitter</a>. {t.uploadedBy} <span className="font-bold dark:text-[#eee] text-[#3d3d3d]">BlackMaps</span>
@@ -100,6 +124,6 @@ export default function MapCard(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
