@@ -82,7 +82,7 @@ export default function ClientSide() {
 
     const handleCategory = (category, index) => {
         index === activeCategory.value ? setActiveCategory({}) :
-            setActiveCategory({ value: index, content: category });
+        setActiveCategory({ value: index, content: category });
     }
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -139,7 +139,7 @@ export default function ClientSide() {
                         {categories.map((category, index) => (
                             <button
                                 onClick={() => handleCategory(category, index)}
-                                className={`p-4 rounded-xl flex items-center gap-2 transition duration-200 bg-neutral-100 text-neutral-800 hover:bg-neutral-200 hover:scale-105 active:scale-95 dark:bg-neutral-600 dark:text-neutral-100 dark:hover:bg-neutral-500 ${activeCategory.value === index ? "dark:bg-neutral-100 dark:hover:bg-neutral-200 dark:text-black bg-neutral-700 hover:bg-neutral-800 text-white" : ""}`}
+                                className={`p-4 rounded-xl flex items-center gap-2 transition duration-200 hover:scale-105 active:scale-95 ${activeCategory.value === index ? "dark:bg-neutral-100 dark:hover:bg-neutral-200 dark:text-black bg-neutral-700 hover:bg-neutral-800 text-white": "bg-neutral-100 text-neutral-800 hover:bg-neutral-200 dark:bg-neutral-600 dark:text-neutral-100 dark:hover:bg-neutral-500"}`}
                                 key={index}
                             >
                                 <CategoryIcon size={24} category={index} isActive={activeCategory.value === index} />
