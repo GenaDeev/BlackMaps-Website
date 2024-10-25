@@ -22,6 +22,7 @@ export default async function Footer({ locale }) {
                             </Link>
                             <Link title="GenaDeev" href="https://www.linkedin.com/in/genadev" className="hover:scale-95 transition duration-200 ">
                                 <Image
+                                    unoptimized
                                     src="/image/genadev-v-nobg-2.webp"
                                     width={128}
                                     height={128}

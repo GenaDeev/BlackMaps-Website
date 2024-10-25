@@ -21,6 +21,7 @@ export default function HomeArticle({ title, image, children, alignement, locale
         return (
                 <a href={image.source} className="flex h-full items-center justify-center md:justify-between flex-wrap gap-24 hover:-rotate-6 hover:scale-105 transition duration-300 filter hover:drop-shadow-custom-lg rounded-xl hover:outline outline-4 hover:outline-neutral-400 dark:hover:outline-neutral-400">
                     <Image
+                        unoptimized
                         loading="lazy"
                         src={image.source}
                         className="rounded-xl"

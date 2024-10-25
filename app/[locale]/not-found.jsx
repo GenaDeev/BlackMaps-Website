@@ -15,6 +15,7 @@ export default function NotFound() {
                             href="/"
                         >
                             <Image
+                                unoptimized
                                 src="/image/app-icon-256.webp"
                                 width={256}
                                 height={256}
@@ -30,6 +31,7 @@ export default function NotFound() {
                             href="https://www.linkedin.com/in/genadev"
                         >
                             <Image
+                                unoptimized
                                 src="/image/genadev-v-nobg-2.webp"
                                 width={256}
                                 height={256}

@@ -4,6 +4,7 @@ export default function Logo(props) {
     return (
         <div className={className}>
             <Image
+                unoptimized
                 src="/image/blackmaps_transparent.webp"
                 width={width}
                 height={height}
