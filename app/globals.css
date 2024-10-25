@@ -8,7 +8,7 @@ html {
 
 .dark,
 .light {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .light ::-moz-selection {
@@ -38,11 +38,11 @@ html {
 
 @keyframes placeHolderShimmer {
   0% {
-    background-position: -800px 0
+    background-position: -800px 0;
   }
 
   100% {
-    background-position: 800px 0
+    background-position: 800px 0;
   }
 }
 
@@ -86,7 +86,7 @@ body.dark .loading {
 }
 
 .flag-icon-es {
-  background-image: url(https://blackmaps.com.ar/image/flags/es.svg)
+  background-image: url(https://blackmaps.com.ar/image/flags/es.svg);
 }
 
 .flag-icon-en {
@@ -122,6 +122,6 @@ body.dark .loading {
 
 @keyframes spinner_StKS {
   100% {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }

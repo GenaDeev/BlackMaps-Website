@@ -1,7 +1,7 @@
-import { createInstance } from 'i18next';
-import { initReactI18next } from 'react-i18next/initReactI18next';
-import resourcesToBackend from 'i18next-resources-to-backend';
-import i18nConfig from '@/i18nConfig';
+import { createInstance } from "i18next";
+import { initReactI18next } from "react-i18next/initReactI18next";
+import resourcesToBackend from "i18next-resources-to-backend";
+import i18nConfig from "@/i18nConfig";
 
 export default async function initTranslations(
   locale,
@@ -15,9 +15,8 @@ export default async function initTranslations(
 
   if (!resources) {
     i18nInstance.use(
-      resourcesToBackend(
-        (language, namespace) =>
-          import(`@/locales/${language}/${namespace}.json`)
+      resourcesToBackend((language, namespace) =>
+        import(`@/locales/${language}/${namespace}.json`)
       )
     );
   }
@@ -30,12 +29,12 @@ export default async function initTranslations(
     defaultNS: namespaces[0],
     fallbackNS: namespaces[0],
     ns: namespaces,
-    preload: resources ? [] : i18nConfig.locales
+    preload: resources ? [] : i18nConfig.locales,
   });
 
   return {
     i18n: i18nInstance,
     resources: i18nInstance.services.resourceStore.data,
-    t: i18nInstance.t
+    t: i18nInstance.t,
   };
 }
