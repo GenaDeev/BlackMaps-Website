@@ -16,11 +16,6 @@ export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={locale}>
       <head>
-        <link
-          rel="icon"
-          type="image/webp"
-          href="https://blackmaps.com.ar/image/favicon.webp"
-        />
         <meta property="fb:app_id" content="1179608519718137" />
         <meta property="og:site_name" content="Black Maps" />
         <meta property="og:locale" content="es_MX" />
