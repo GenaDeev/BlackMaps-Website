@@ -1,4 +1,15 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .bg-hero-light {
+    background-image: url('/image/bg-map-l.webp');
+  }
+
+  .dark .bg-hero-dark {
+    background-image: url('/image/bg-map.webp');
+  }
+}
 
 html {
   scroll-behavior: smooth;
